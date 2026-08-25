@@ -1,6 +1,6 @@
 import { Crown, Shield, Zap, Infinity as InfinityIcon } from "lucide-react";
 import heroLogo from "@/assets/hero-logo.png.asset.json";
-import titleLogo from "@/assets/title-logo.png.asset.json";
+import titleEmblem from "@/assets/title-emblem.png.asset.json";
 
 const PILLARS = [
   {
@@ -31,9 +31,9 @@ export function Hero() {
                 VonteVisualz
               </h1>
               <img
-                src={titleLogo.url}
+                src={titleEmblem.url}
                 alt="VonteVisualz thorn rose emblem"
-                className="h-12 w-auto object-contain sm:h-14 lg:h-16"
+                className="h-14 w-auto mix-blend-screen object-contain sm:h-16 lg:h-20"
               />
             </div>
             <p className="mt-5 text-xs tracking-[0.22em] uppercase text-foreground/80">

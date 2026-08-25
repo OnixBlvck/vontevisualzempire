@@ -1,6 +1,6 @@
 import { Instagram, Youtube, Mail, Music2, Video } from "lucide-react";
 import { toast } from "sonner";
-import titleLogo from "@/assets/title-logo.png.asset.json";
+import titleEmblem from "@/assets/title-emblem.png.asset.json";
 
 const QUICK_A = [
   { label: "Home", href: "#home" },
@@ -28,9 +28,9 @@ export function Footer() {
             From Scars To Symbols
           </p>
           <img
-            src={titleLogo.url}
+            src={titleEmblem.url}
             alt="VonteVisualz emblem"
-            className="mt-6 w-40 object-contain opacity-90"
+            className="mt-6 w-40 mix-blend-screen object-contain opacity-90"
           />
         </div>
 

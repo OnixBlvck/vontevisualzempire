@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import titleLogo from "@/assets/title-logo.png.asset.json";
+import titleEmblem from "@/assets/title-emblem.png.asset.json";
 
 const NAV = [
   { label: "Home", href: "#home" },
@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-ink/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 lg:px-8">
         <a href="#home" className="flex shrink-0 items-center gap-2">
-          <img src={titleLogo.url} alt="VonteVisualz emblem" className="h-8 w-8 object-cover" />
+          <img src={titleEmblem.url} alt="VonteVisualz emblem" className="h-9 w-auto mix-blend-screen object-contain" />
           <span className="display metal-text text-lg tracking-[0.14em] sm:text-xl">
             VonteVisualz
           </span>

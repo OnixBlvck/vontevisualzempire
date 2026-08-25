@@ -1,4 +1,4 @@
-import titleLogo from "@/assets/title-logo.png.asset.json";
+import titleEmblem from "@/assets/title-emblem.png.asset.json";
 import heroLogo from "@/assets/hero-logo.png.asset.json";
 
 export function About() {
@@ -35,9 +35,9 @@ export function About() {
 
         <div className="night-sky flex items-center justify-center border-t border-border p-8 lg:border-l lg:border-t-0">
           <img
-            src={titleLogo.url}
+            src={titleEmblem.url}
             alt="VonteVisualz thorn rose emblem"
-            className="w-full max-w-[280px] object-contain"
+            className="w-full max-w-[280px] mix-blend-screen object-contain"
           />
         </div>
       </div>
