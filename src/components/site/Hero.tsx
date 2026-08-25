@@ -33,7 +33,7 @@ export function Hero() {
               <img
                 src={titleEmblem.url}
                 alt="VonteVisualz thorn rose emblem"
-                className="h-10 w-auto shrink-0 mix-blend-screen object-contain sm:h-14 lg:h-16"
+                className="h-12 w-auto shrink-0 mix-blend-screen object-contain brightness-125 sm:h-16 lg:h-20"
               />
             </div>
             <p className="mt-5 text-xs tracking-[0.22em] uppercase text-foreground/80">
