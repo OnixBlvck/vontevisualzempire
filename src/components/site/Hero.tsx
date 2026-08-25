@@ -26,14 +26,14 @@ export function Hero() {
 
           <div className="text-center md:text-left">
             <p className="label-xs text-royal">From scars to symbols</p>
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-              <h1 className="metal-text text-4xl leading-none sm:text-5xl lg:text-6xl">
+            <div className="mt-3 flex flex-nowrap items-center justify-center gap-2 md:justify-start">
+              <h1 className="metal-text whitespace-nowrap text-[8vw] leading-none sm:text-5xl lg:text-6xl">
                 VonteVisualz
               </h1>
               <img
                 src={titleEmblem.url}
                 alt="VonteVisualz thorn rose emblem"
-                className="h-14 w-auto mix-blend-screen object-contain sm:h-16 lg:h-20"
+                className="h-10 w-auto shrink-0 mix-blend-screen object-contain sm:h-14 lg:h-16"
               />
             </div>
             <p className="mt-5 text-xs tracking-[0.22em] uppercase text-foreground/80">
