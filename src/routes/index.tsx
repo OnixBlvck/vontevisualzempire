@@ -1,24 +1,59 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Toaster } from "@/components/ui/sonner";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Brands } from "@/components/site/Brands";
+import { MidRow } from "@/components/site/MidRow";
+import { FeatureStrip } from "@/components/site/FeatureStrip";
+import { About } from "@/components/site/About";
+import { NowPlaying } from "@/components/site/NowPlaying";
+import { Portfolio } from "@/components/site/Portfolio";
+import { Pricing } from "@/components/site/Pricing";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "VonteVisualz | Tattoos, Music & Design Creative Empire" },
+      {
+        name: "description",
+        content:
+          "VonteVisualz is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. From scars to symbols — book your session.",
+      },
+      { property: "og:title", content: "VonteVisualz | Creative Empire" },
+      {
+        property: "og:description",
+        content:
+          "InkNior tattoos, OnixBlvck music, FastCutEdits design. Every story deserves to be seen.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [openId, setOpenId] = useState<string | null>(null);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <Brands />
+        <MidRow onOpen={setOpenId} />
+        <FeatureStrip />
+        <About />
+        <NowPlaying />
+        <Portfolio openId={openId} onOpen={setOpenId} />
+        <Pricing />
+        <Contact />
+      </main>
+      <Footer />
+      <Toaster />
     </div>
   );
 }
