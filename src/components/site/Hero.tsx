@@ -20,13 +20,12 @@ export function Hero() {
         <div className="reveal grid items-center gap-8 md:grid-cols-[minmax(180px,300px)_1fr]">
           <img
             src={heroLogo.url}
-            alt="VonteVisuals raven emblem"
+            alt="VonteVisuals phoenix and rose emblem"
             className="mx-auto w-full max-w-[300px] object-contain"
           />
 
           <div className="text-center md:text-left">
-            <p className="label-xs text-royal">From scars to symbols</p>
-            <div className="mt-3 flex flex-nowrap items-center justify-center gap-2 md:justify-start">
+            <div className="flex flex-nowrap items-center justify-center gap-2 md:justify-start">
               <h1 className="metal-text whitespace-nowrap text-[8vw] leading-none sm:text-5xl lg:text-6xl">
                 VonteVisuals
               </h1>
@@ -36,18 +35,26 @@ export function Hero() {
                 className="h-12 w-auto shrink-0 mix-blend-screen object-contain brightness-125 sm:h-16 lg:h-20"
               />
             </div>
-            <p className="mt-5 text-xs tracking-[0.22em] uppercase text-foreground/80">
-              Every story deserves to be seen.
+            <p className="mt-5 text-xs tracking-[0.22em] uppercase text-silver">
+              Scars tell stories, but beauty is pain.
             </p>
-            <p className="mt-2 text-xs tracking-[0.22em] uppercase text-foreground/80">
-              We turn pain into purpose.
+            <p className="mt-2 text-[0.66rem] tracking-[0.28em] uppercase text-royal">
+              Your story. Your identity. Your vision.
             </p>
-            <a
-              href="#brands"
-              className="mt-8 inline-block border border-royal/60 bg-royal/20 px-8 py-3 text-[0.7rem] tracking-[0.26em] uppercase transition-colors hover:bg-royal/40"
-            >
-              Enter the Empire
-            </a>
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+              <a
+                href="#brands"
+                className="inline-block border border-royal/60 bg-royal/20 px-8 py-3 text-[0.7rem] tracking-[0.26em] uppercase transition-colors hover:bg-royal/40"
+              >
+                Enter the Empire
+              </a>
+              <a
+                href="#music"
+                className="inline-block border border-border bg-secondary/50 px-8 py-3 text-[0.7rem] tracking-[0.26em] uppercase transition-colors hover:bg-secondary"
+              >
+                The Music Vault
+              </a>
+            </div>
           </div>
         </div>
 
