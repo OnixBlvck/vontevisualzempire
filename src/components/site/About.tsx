@@ -8,17 +8,17 @@ export function About() {
         <div className="night-sky flex items-center justify-center border-b border-border p-8 lg:border-b-0 lg:border-r">
           <img
             src={heroLogo.url}
-            alt="VonteVisualz raven emblem"
+            alt="VonteVisuals raven emblem"
             className="w-full max-w-[320px] object-contain"
           />
         </div>
 
         <div className="panel p-8">
-          <p className="label-xs text-royal">The Story Behind VonteVisualz</p>
+          <p className="label-xs text-royal">The Story Behind VonteVisuals</p>
           <div className="mt-4 space-y-4 text-xs leading-relaxed text-muted-foreground">
             <p>
               I'm Da'zson Bolding, born December 11th, 1994 at 5:00 AM in Houston, Texas. I'm a
-              father of 4 and the mind behind VonteVisualz.
+              father of 4 and the mind behind VonteVisuals.
             </p>
             <p>I built this empire from nothing. No handouts. Just pain, purpose, and vision.</p>
             <p>Music saved me. Art healed me. My kids keep me going.</p>
@@ -36,7 +36,7 @@ export function About() {
         <div className="night-sky flex items-center justify-center border-t border-border p-8 lg:border-l lg:border-t-0">
           <img
             src={titleEmblem.url}
-            alt="VonteVisualz thorn rose emblem"
+            alt="VonteVisuals thorn rose emblem"
             className="w-full max-w-[280px] mix-blend-screen object-contain"
           />
         </div>
