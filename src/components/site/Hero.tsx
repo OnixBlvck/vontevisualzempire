@@ -20,7 +20,7 @@ export function Hero() {
         <div className="reveal grid items-center gap-8 md:grid-cols-[minmax(180px,300px)_1fr]">
           <img
             src={heroLogo.url}
-            alt="VonteVisualz raven emblem"
+            alt="VonteVisuals raven emblem"
             className="mx-auto w-full max-w-[300px] object-contain"
           />
 
@@ -28,11 +28,11 @@ export function Hero() {
             <p className="label-xs text-royal">From scars to symbols</p>
             <div className="mt-3 flex flex-nowrap items-center justify-center gap-2 md:justify-start">
               <h1 className="metal-text whitespace-nowrap text-[8vw] leading-none sm:text-5xl lg:text-6xl">
-                VonteVisualz
+                VonteVisuals
               </h1>
               <img
                 src={titleEmblem.url}
-                alt="VonteVisualz thorn rose emblem"
+                alt="VonteVisuals thorn rose emblem"
                 className="h-12 w-auto shrink-0 mix-blend-screen object-contain brightness-125 sm:h-16 lg:h-20"
               />
             </div>
@@ -52,7 +52,7 @@ export function Hero() {
         </div>
 
         <aside className="panel p-6 lg:border-y-0 lg:border-r-0">
-          <p className="label-xs text-foreground/60">The VonteVisualz Empire</p>
+          <p className="label-xs text-foreground/60">The VonteVisuals Empire</p>
           <ul className="mt-6 grid gap-6">
             {PILLARS.map(({ icon: Icon, title, body }) => (
               <li key={title} className="flex gap-3">

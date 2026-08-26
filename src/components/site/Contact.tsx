@@ -14,21 +14,21 @@ export function Contact() {
           <ul className="mt-8 grid gap-3 text-[0.7rem] tracking-[0.14em] text-muted-foreground">
             <li className="flex items-center gap-2">
               <Mail className="size-4 text-royal" />
-              <a href="mailto:book@vontevisualz.com" className="hover:text-foreground">
-                book@vontevisualz.com
+              <a href="mailto:book@vontevisuals.com" className="hover:text-foreground">
+                book@vontevisuals.com
               </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="size-4 text-royal" />
-              <a href="mailto:contact@vontevisualz.com" className="hover:text-foreground">
-                contact@vontevisualz.com
+              <a href="mailto:contact@vontevisuals.com" className="hover:text-foreground">
+                contact@vontevisuals.com
               </a>
             </li>
             <li className="flex items-center gap-2">
               <CreditCard className="size-4 text-royal" /> Digital Business Card
             </li>
             <li className="flex items-center gap-2">
-              <Globe className="size-4 text-royal" /> VonteVisualz.com
+              <Globe className="size-4 text-royal" /> VonteVisuals.com
             </li>
           </ul>
           <div className="panel mt-8 p-6">

@@ -16,13 +16,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VonteVisualz | Tattoos, Music & Design Creative Empire" },
+      { title: "VonteVisuals | Tattoos, Music & Design Creative Empire" },
       {
         name: "description",
         content:
-          "VonteVisualz is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. From scars to symbols — book your session.",
+          "VonteVisuals is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. From scars to symbols — book your session.",
       },
-      { property: "og:title", content: "VonteVisualz | Creative Empire" },
+      { property: "og:title", content: "VonteVisuals | Creative Empire" },
       {
         property: "og:description",
         content:

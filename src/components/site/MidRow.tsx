@@ -50,7 +50,7 @@ export function MidRow({ onOpen }: { onOpen: (id: string) => void }) {
             It's a <span className="text-royal">movement.</span>
           </h2>
           <div className="mt-4 space-y-1 text-xs leading-relaxed text-muted-foreground">
-            <p>VonteVisualz was built from the dark—</p>
+            <p>VonteVisuals was built from the dark—</p>
             <p>from pain, mistakes, and everything I had to survive.</p>
             <p>Art saved me. Creating saved me.</p>
             <p>Now I use every scar as fuel</p>
@@ -72,7 +72,7 @@ export function MidRow({ onOpen }: { onOpen: (id: string) => void }) {
             <p className="label-xs text-royal">Client Testimonials</p>
             <Quote className="mt-3 size-4 text-royal" />
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              VonteVisualz took my vision and turned it into something bigger than I imagined. He
+              VonteVisuals took my vision and turned it into something bigger than I imagined. He
               doesn't just create... he builds your identity.
             </p>
             <div className="mt-4 flex items-center gap-3">
