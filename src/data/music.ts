@@ -20,3 +20,7 @@ export const tracks: Track[] = [
     audioUrl: popMyShitAudio.url,
   },
 ];
+
+/** Legitimate external destination for the OnixBlvck catalog. */
+export const BANDLAB_URL =
+  "https://www.bandlab.com/post/9ff03d4f-a978-44a5-b4a9-c2ed15d44156";
