@@ -1,77 +1,89 @@
-import { Crown, Shield, Zap, Infinity as InfinityIcon } from "lucide-react";
 import heroLogo from "@/assets/hero-logo.png.asset.json";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
-
-const PILLARS = [
-  {
-    icon: Crown,
-    title: "Artistry",
-    body: "We create with emotion, precision, and intention in every detail.",
-  },
-  { icon: Shield, title: "Identity", body: "We build more than visuals. We build legacies." },
-  { icon: Zap, title: "Innovation", body: "We push boundaries and turn ideas into impact." },
-  { icon: InfinityIcon, title: "Legacy", body: "We don't chase trends. We leave something timeless." },
-];
+import thornyEmblem from "@/assets/thorny-v-emblem.png.asset.json";
+import onixArt from "@/assets/onix-art.jpg.asset.json";
+import heroCity from "@/assets/hero-city.jpg.asset.json";
+import { MusicPlayer } from "./MusicPlayer";
 
 export function Hero() {
   return (
-    <section id="home" className="night-sky relative border-b border-border">
-      <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-14 lg:grid-cols-[1fr_320px] lg:gap-8 lg:px-8 lg:py-20">
-        <div className="reveal grid items-center gap-8 md:grid-cols-[minmax(180px,300px)_1fr]">
+    <section id="home" className="relative overflow-hidden border-b border-border">
+      <img
+        src={heroCity.url}
+        alt=""
+        aria-hidden
+        width={1920}
+        height={1088}
+        className="absolute inset-0 size-full object-cover opacity-60"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 50% 10%, color-mix(in oklab, var(--royal) 22%, transparent), transparent 60%), linear-gradient(to bottom, color-mix(in oklab, var(--ink) 55%, transparent), var(--ink) 92%)",
+        }}
+        aria-hidden
+      />
+
+      <div className="relative mx-auto max-w-[1400px] px-4 pt-10 pb-12 lg:px-8 lg:pt-14">
+        <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_minmax(0,1fr)]">
+          {/* Left artwork */}
           <img
             src={heroLogo.url}
-            alt="VonteVisuals phoenix and rose emblem"
-            className="mx-auto w-full max-w-[300px] object-contain"
+            alt="VonteVisualz phoenix and rose emblem"
+            className="mx-auto w-full max-w-[240px] object-contain lg:max-w-[280px]"
           />
 
-          <div className="text-center md:text-left">
-            <div className="flex flex-nowrap items-center justify-center gap-2 md:justify-start">
-              <h1 className="metal-text whitespace-nowrap text-[8vw] leading-none sm:text-5xl lg:text-6xl">
-                VonteVisuals
+          {/* Center titles */}
+          <div className="text-center">
+            <div className="flex flex-nowrap items-center justify-center gap-2">
+              <h1 className="metal-text whitespace-nowrap text-[8.5vw] leading-none sm:text-5xl lg:text-6xl">
+                VonteVisualz
               </h1>
               <img
-                src={titleEmblem.url}
-                alt="VonteVisuals thorn rose emblem"
-                className="h-12 w-auto shrink-0 mix-blend-screen object-contain brightness-125 sm:h-16 lg:h-20"
+                src={thornyEmblem.url}
+                alt="Thorny V emblem with golden tear"
+                className="h-12 w-auto shrink-0 object-contain mix-blend-screen sm:h-16 lg:h-[4.5rem]"
               />
             </div>
-            <p className="mt-5 text-xs tracking-[0.22em] uppercase text-silver">
-              Scars tell stories, but beauty is pain.
-            </p>
-            <p className="mt-2 text-[0.66rem] tracking-[0.28em] uppercase text-royal">
+            <p className="mt-4 text-[0.6rem] tracking-[0.3em] uppercase text-royal sm:text-[0.68rem]">
               Your story. Your identity. Your vision.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+            <p className="display mt-5 text-sm leading-relaxed tracking-[0.16em] uppercase text-silver sm:text-base">
+              Scars tell stories, but beauty is pain.
+            </p>
+            <p className="mx-auto mt-4 max-w-[42ch] text-xs leading-relaxed text-muted-foreground">
+              One empire, three identities — tattoo artistry, music, and design built from
+              real life and carried with intention.
+            </p>
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
               <a
                 href="#brands"
-                className="inline-block border border-royal/60 bg-royal/20 px-8 py-3 text-[0.7rem] tracking-[0.26em] uppercase transition-colors hover:bg-royal/40"
+                className="border border-royal/60 bg-royal/25 px-7 py-3 text-[0.66rem] tracking-[0.26em] uppercase transition-colors hover:bg-royal/45"
               >
                 Enter the Empire
               </a>
               <a
                 href="#music"
-                className="inline-block border border-border bg-secondary/50 px-8 py-3 text-[0.7rem] tracking-[0.26em] uppercase transition-colors hover:bg-secondary"
+                className="border border-border bg-secondary/50 px-7 py-3 text-[0.66rem] tracking-[0.26em] uppercase transition-colors hover:bg-secondary"
               >
                 The Music Vault
               </a>
             </div>
           </div>
+
+          {/* Right artwork */}
+          <img
+            src={onixArt.url}
+            alt="OnixBlvck rose artwork"
+            loading="lazy"
+            className="mx-auto w-full max-w-[240px] border border-border object-cover lg:max-w-[280px]"
+          />
         </div>
 
-        <aside className="panel p-6 lg:border-y-0 lg:border-r-0">
-          <p className="label-xs text-foreground/60">The VonteVisuals Empire</p>
-          <ul className="mt-6 grid gap-6">
-            {PILLARS.map(({ icon: Icon, title, body }) => (
-              <li key={title} className="flex gap-3">
-                <Icon className="mt-0.5 size-4 shrink-0 text-royal" />
-                <div>
-                  <p className="text-[0.7rem] tracking-[0.2em] uppercase text-silver">{title}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{body}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        {/* Player integrated in the lower hero */}
+        <div className="mt-10">
+          <MusicPlayer />
+        </div>
       </div>
     </section>
   );
