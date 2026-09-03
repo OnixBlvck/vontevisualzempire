@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
+import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 const NAV = [
   { label: "Home", href: "#home" },
-  { label: "OnixBlvck", href: "#onixblvck" },
-  { label: "InkNior", href: "#inknior" },
-  { label: "FastCutEdits", href: "#fastcutedits" },
+  { label: "Music", href: "#music" },
+  { label: "Tattoo", href: "#inknior" },
+  { label: "Design", href: "#fastcutedits" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Booking", href: "#booking" },
   { label: "About", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -21,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-ink/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 lg:px-8">
         <a href="#home" className="flex shrink-0 items-center gap-2">
-          <img src={titleEmblem.url} alt="VonteVisualz emblem" className="h-9 w-auto mix-blend-screen object-contain" />
+          <img src={emblem.url} alt="VonteVisualz emblem" className="h-9 w-auto mix-blend-screen object-contain" />
           <span className="display metal-text text-lg tracking-[0.14em] sm:text-xl">
             VonteVisualz
           </span>

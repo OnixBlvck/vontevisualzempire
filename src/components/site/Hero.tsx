@@ -1,5 +1,5 @@
 import heroLogo from "@/assets/hero-logo.png.asset.json";
-import thornyEmblem from "@/assets/thorny-v-emblem.png.asset.json";
+import thornyEmblem from "@/assets/vonte-emblem.jpg.asset.json";
 import onixArt from "@/assets/onix-art.jpg.asset.json";
 import heroCity from "@/assets/hero-city.jpg.asset.json";
 import { MusicPlayer } from "./MusicPlayer";
@@ -41,15 +41,15 @@ export function Hero() {
               </h1>
               <img
                 src={thornyEmblem.url}
-                alt="Thorny V emblem with golden tear"
-                className="h-12 w-auto shrink-0 object-contain mix-blend-screen sm:h-16 lg:h-[4.5rem]"
+                alt="VonteVisualz thorny V emblem with black rose"
+                className="h-12 w-auto shrink-0 object-contain sm:h-16 lg:h-[4.5rem]"
               />
             </div>
             <p className="mt-4 text-[0.6rem] tracking-[0.3em] uppercase text-royal sm:text-[0.68rem]">
               Your story. Your identity. Your vision.
             </p>
             <p className="display mt-5 text-sm leading-relaxed tracking-[0.16em] uppercase text-silver sm:text-base">
-              Scars tell stories, but beauty is pain.
+              This wasn't taught. It was forged.
             </p>
             <p className="mx-auto mt-4 max-w-[42ch] text-xs leading-relaxed text-muted-foreground">
               One empire, three identities — tattoo artistry, music, and design built from

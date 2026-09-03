@@ -29,7 +29,7 @@ export function About() {
         {/* OnixBlvck story */}
         <div id="onixblvck-story">
           <p className="label-xs text-royal">OnixBlvck</p>
-          <h2 className="metal-text mt-2 text-2xl">The Story</h2>
+          <h2 className="metal-text mt-2 text-2xl">Forged From The Ashes</h2>
           <img
             src={foundationPortrait.url}
             alt="OnixBlvck portrait"
@@ -42,7 +42,11 @@ export function About() {
             longer than the moment that made it.
           </p>
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-            Scars tell stories, but beauty is pain. That line is the whole catalog.
+            I didn't have the easy path. This empire was built from pain, forged through
+            discipline, and fueled by purpose.
+          </p>
+          <p className="label-xs mt-4 text-[0.55rem] text-gold">
+            I wasn't born like this. I was forged.
           </p>
         </div>
 

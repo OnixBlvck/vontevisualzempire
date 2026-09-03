@@ -1,7 +1,7 @@
 import { Mail, MapPin, Instagram, Youtube, Music2, Video } from "lucide-react";
 import { toast } from "sonner";
 import vcardQr from "@/assets/vcard-qr.png.asset.json";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
+import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 export function Contact() {
   return (
@@ -99,9 +99,9 @@ export function Contact() {
           <p className="label-xs text-royal">Digital Business Card</p>
           <div className="panel mt-5 p-6 text-center">
             <img
-              src={titleEmblem.url}
+              src={emblem.url}
               alt="VonteVisualz emblem"
-              className="mx-auto h-14 w-auto mix-blend-screen object-contain"
+              className="mx-auto h-16 w-auto object-contain"
             />
             <p className="metal-text mt-3 text-xl">VonteVisualz</p>
             <p className="mt-2 text-[0.65rem] tracking-[0.16em] uppercase text-silver">

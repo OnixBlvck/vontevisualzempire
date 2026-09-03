@@ -1,19 +1,17 @@
 import { Instagram, Youtube, Mail, Music2, Video } from "lucide-react";
 import { toast } from "sonner";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
+import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 const QUICK_A = [
   { label: "Home", href: "#home" },
-  { label: "OnixBlvck", href: "#onixblvck" },
-  { label: "InkNior", href: "#inknior" },
-  { label: "FastCutEdits", href: "#fastcutedits" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Music", href: "#music" },
+  { label: "Tattoo", href: "#inknior" },
+  { label: "Design", href: "#fastcutedits" },
 ];
 const QUICK_B = [
-  { label: "Pricing", href: "#pricing" },
-  { label: "Booking", href: "#booking" },
-  { label: "My Story", href: "#about" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -28,9 +26,9 @@ export function Footer() {
             Your Story. Your Identity. Your Vision.
           </p>
           <img
-            src={titleEmblem.url}
+            src={emblem.url}
             alt="VonteVisualz emblem"
-            className="mt-6 w-40 mix-blend-screen object-contain opacity-90"
+            className="mt-6 w-40 border border-border object-contain opacity-90"
           />
         </div>
 
