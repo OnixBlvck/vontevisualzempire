@@ -1,14 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Brands } from "@/components/site/Brands";
-import { MidRow } from "@/components/site/MidRow";
-import { FeatureStrip } from "@/components/site/FeatureStrip";
+import { PortfolioStrip } from "@/components/site/PortfolioStrip";
 import { About } from "@/components/site/About";
-import { NowPlaying } from "@/components/site/NowPlaying";
-import { Portfolio } from "@/components/site/Portfolio";
 import { Pricing } from "@/components/site/Pricing";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
@@ -20,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "VonteVisuals is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. From scars to symbols — book your session.",
+          "VonteVisuals is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. Book your session in Houston, Texas.",
       },
       { property: "og:title", content: "VonteVisuals | Creative Empire" },
       {
@@ -36,19 +32,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [openId, setOpenId] = useState<string | null>(null);
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
         <Hero />
         <Brands />
-        <MidRow onOpen={setOpenId} />
-        <FeatureStrip />
+        <PortfolioStrip />
         <About />
-        <NowPlaying />
-        <Portfolio openId={openId} onOpen={setOpenId} />
         <Pricing />
         <Contact />
       </main>
