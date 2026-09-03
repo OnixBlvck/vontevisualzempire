@@ -25,7 +25,7 @@ export function Footer() {
           <p className="metal-text display text-2xl">VonteVisuals</p>
           <p className="label-xs mt-2 text-[0.55rem]">The Creative Empire</p>
           <p className="text-[0.55rem] tracking-[0.28em] uppercase text-royal">
-            From Scars To Symbols
+            Your Story. Your Identity. Your Vision.
           </p>
           <img
             src={titleEmblem.url}
