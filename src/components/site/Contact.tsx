@@ -1,7 +1,7 @@
 import { Mail, MapPin, Instagram, Youtube, Music2, Video } from "lucide-react";
 import { toast } from "sonner";
 import vcardQr from "@/assets/vcard-qr.png.asset.json";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
+import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 export function Contact() {
   return (
@@ -14,8 +14,8 @@ export function Contact() {
           <ul className="mt-5 grid gap-3 text-xs text-muted-foreground">
             <li className="flex items-center gap-2">
               <Mail className="size-3.5 text-royal" />
-              <a href="mailto:contact@vontevisuals.com" className="hover:text-foreground">
-                contact@vontevisuals.com
+              <a href="mailto:vontevisualz@gmail.com" className="hover:text-foreground">
+                vontevisualz@gmail.com
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export function Contact() {
             deserves to be seen, bring it here. Every project starts with a conversation.
           </p>
           <a
-            href="mailto:contact@vontevisuals.com"
+            href="mailto:vontevisualz@gmail.com"
             className="mt-6 inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.22em] uppercase transition-colors hover:bg-royal/35"
           >
             Start A Project →
@@ -99,22 +99,22 @@ export function Contact() {
           <p className="label-xs text-royal">Digital Business Card</p>
           <div className="panel mt-5 p-6 text-center">
             <img
-              src={titleEmblem.url}
-              alt="VonteVisuals emblem"
-              className="mx-auto h-14 w-auto mix-blend-screen object-contain"
+              src={emblem.url}
+              alt="VonteVisualz emblem"
+              className="mx-auto h-16 w-auto object-contain"
             />
-            <p className="metal-text mt-3 text-xl">VonteVisuals</p>
+            <p className="metal-text mt-3 text-xl">VonteVisualz</p>
             <p className="mt-2 text-[0.65rem] tracking-[0.16em] uppercase text-silver">
               Da'zson Bolding
             </p>
             <p className="text-[0.6rem] tracking-[0.16em] uppercase text-muted-foreground">
               Houston, Texas
             </p>
-            <p className="mt-2 text-[0.62rem] text-muted-foreground">contact@vontevisuals.com</p>
-            <p className="text-[0.62rem] text-muted-foreground">VonteVisuals.com</p>
+            <p className="mt-2 text-[0.62rem] text-muted-foreground">vontevisualz@gmail.com</p>
+            <p className="text-[0.62rem] text-muted-foreground">VonteVisualz.com</p>
             <img
               src={vcardQr.url}
-              alt="QR code to save VonteVisuals contact"
+              alt="QR code to save VonteVisualz contact"
               loading="lazy"
               className="mx-auto mt-5 size-32 bg-white p-2"
             />

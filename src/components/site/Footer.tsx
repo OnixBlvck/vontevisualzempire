@@ -1,19 +1,17 @@
 import { Instagram, Youtube, Mail, Music2, Video } from "lucide-react";
 import { toast } from "sonner";
-import titleEmblem from "@/assets/title-emblem.png.asset.json";
+import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 const QUICK_A = [
   { label: "Home", href: "#home" },
-  { label: "OnixBlvck", href: "#onixblvck" },
-  { label: "InkNior", href: "#inknior" },
-  { label: "FastCutEdits", href: "#fastcutedits" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Music", href: "#music" },
+  { label: "Tattoo", href: "#inknior" },
+  { label: "Design", href: "#fastcutedits" },
 ];
 const QUICK_B = [
-  { label: "Pricing", href: "#pricing" },
-  { label: "Booking", href: "#booking" },
-  { label: "My Story", href: "#about" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,15 +20,15 @@ export function Footer() {
     <footer className="bg-ink">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-14 lg:grid-cols-[1.1fr_1fr_0.8fr_1.2fr] lg:px-8">
         <div>
-          <p className="metal-text display text-2xl">VonteVisuals</p>
+          <p className="metal-text display text-2xl">VonteVisualz</p>
           <p className="label-xs mt-2 text-[0.55rem]">The Creative Empire</p>
           <p className="text-[0.55rem] tracking-[0.28em] uppercase text-royal">
             Your Story. Your Identity. Your Vision.
           </p>
           <img
-            src={titleEmblem.url}
-            alt="VonteVisuals emblem"
-            className="mt-6 w-40 mix-blend-screen object-contain opacity-90"
+            src={emblem.url}
+            alt="VonteVisualz emblem"
+            className="mt-6 w-40 border border-border object-contain opacity-90"
           />
         </div>
 
@@ -66,7 +64,7 @@ export function Footer() {
               { Icon: Video, label: "TikTok", href: "#contact" },
               { Icon: Youtube, label: "YouTube", href: "#contact" },
               { Icon: Music2, label: "Spotify", href: "#onixblvck" },
-              { Icon: Mail, label: "Email", href: "mailto:contact@vontevisuals.com" },
+              { Icon: Mail, label: "Email", href: "mailto:vontevisualz@gmail.com" },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
@@ -135,10 +133,10 @@ export function Footer() {
         <div>
           <p className="label-xs text-royal">Contact</p>
           <ul className="mt-3 grid gap-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground">
-            <li><a href="mailto:book@vontevisuals.com" className="hover:text-foreground">book@vontevisuals.com</a></li>
-            <li><a href="mailto:contact@vontevisuals.com" className="hover:text-foreground">contact@vontevisuals.com</a></li>
+            <li><a href="mailto:vontevisualz@gmail.com" className="hover:text-foreground">vontevisualz@gmail.com</a></li>
+            <li><a href="mailto:vontevisualz@gmail.com" className="hover:text-foreground">vontevisualz@gmail.com</a></li>
             <li>Digital Business Card</li>
-            <li>VonteVisuals.com</li>
+            <li>VonteVisualz.com</li>
           </ul>
         </div>
         <div>
@@ -159,9 +157,9 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-2 px-4 py-5 lg:px-8">
           <p className="label-xs text-[0.55rem]">
-            © 2026 VonteVisuals Empire. All rights reserved.
+            © 2026 VonteVisualz Empire. All rights reserved.
           </p>
-          <p className="label-xs text-[0.55rem]">Built by VonteVisuals</p>
+          <p className="label-xs text-[0.55rem]">Built by VonteVisualz</p>
         </div>
       </div>
     </footer>
