@@ -8,16 +8,16 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio | VonteVisuals Cover Art, Flyers & Video" },
+      { title: "Portfolio | VonteVisualz Cover Art, Flyers & Video" },
       {
         name: "description",
         content:
-          "Browse the VonteVisuals portfolio — OnixBlvck cover art, InkNior flyers, FastCutEdits video work and brand logos.",
+          "Browse the VonteVisualz portfolio — OnixBlvck cover art, InkNior flyers, FastCutEdits video work and brand logos.",
       },
-      { property: "og:title", content: "Portfolio | VonteVisuals" },
+      { property: "og:title", content: "Portfolio | VonteVisualz" },
       {
         property: "og:description",
-        content: "Cover art, flyers, video stills and logos from the VonteVisuals empire.",
+        content: "Cover art, flyers, video stills and logos from the VonteVisualz empire.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

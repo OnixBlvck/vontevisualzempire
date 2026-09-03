@@ -17,7 +17,7 @@ export function About() {
             className="mt-5 h-40 w-full border border-border object-cover opacity-80"
           />
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            VonteVisuals wasn't built from comfort. It was built from everything that had to be
+            VonteVisualz wasn't built from comfort. It was built from everything that had to be
             survived first. Every piece of art, every song, every design carries that weight —
             proof that pain can be turned into something permanent.
           </p>
