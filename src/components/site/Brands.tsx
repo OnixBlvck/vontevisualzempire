@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react";
 import panelTattoo from "@/assets/panel-tattoo.jpg.asset.json";
 import panelDesign from "@/assets/panel-design.jpg.asset.json";
 import panelMusic from "@/assets/panel-music.jpg.asset.json";
