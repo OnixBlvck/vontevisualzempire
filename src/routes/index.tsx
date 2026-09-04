@@ -4,6 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Brands } from "@/components/site/Brands";
 import { PortfolioStrip } from "@/components/site/PortfolioStrip";
+import { VideoSection } from "@/components/site/VideoSection";
 import { About } from "@/components/site/About";
 import { Pricing } from "@/components/site/Pricing";
 import { AppSection } from "@/components/site/AppSection";
