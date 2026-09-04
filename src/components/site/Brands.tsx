@@ -3,7 +3,17 @@ import panelTattoo from "@/assets/panel-tattoo.jpg.asset.json";
 import panelDesign from "@/assets/panel-design.jpg.asset.json";
 import panelMusic from "@/assets/panel-music.jpg.asset.json";
 
-const PANELS = [
+const PANELS: {
+  id: string;
+  name: string;
+  tag: string;
+  body: string;
+  cta: string;
+  href: string;
+  bg: string;
+  ig: string;
+  igUrl: string;
+}[] = [
   {
     id: "inknior",
     name: "InkNior",
