@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Mail, Music2, Video } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { toast } from "sonner";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
