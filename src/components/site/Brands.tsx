@@ -74,8 +74,17 @@ export function Brands() {
                 {p.body}
               </p>
               <a
+                href={p.igUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-auto mt-5 inline-flex min-h-11 items-center gap-2 border border-border bg-secondary/50 px-4 text-[0.6rem] tracking-[0.2em] uppercase text-silver transition-colors hover:border-royal/60 hover:text-foreground"
+              >
+                <Instagram className="size-4" />
+                {p.ig}
+              </a>
+              <a
                 href={p.href}
-                className="mt-auto inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.24em] uppercase transition-colors hover:bg-royal/35"
+                className="mt-6 inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.24em] uppercase transition-colors hover:bg-royal/35"
               >
                 {p.cta} →
               </a>
