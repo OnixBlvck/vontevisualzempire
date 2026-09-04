@@ -10,6 +10,7 @@ const QUICK_A = [
 ];
 const QUICK_B = [
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Video", href: "#video" },
   { label: "About", href: "#about" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
