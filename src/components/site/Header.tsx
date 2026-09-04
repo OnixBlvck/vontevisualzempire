@@ -8,6 +8,7 @@ const NAV = [
   { label: "Tattoo", href: "#inknior" },
   { label: "Design", href: "#fastcutedits" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Video", href: "#video" },
   { label: "About", href: "#about" },
   { label: "Pricing", href: "#pricing" },
   { label: "App", href: "#app" },
