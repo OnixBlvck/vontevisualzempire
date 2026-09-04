@@ -22,6 +22,8 @@ const PANELS: {
     cta: "View Tattoos",
     href: "#pricing",
     bg: panelTattoo.url,
+    ig: "@inknior",
+    igUrl: "https://www.instagram.com/inknior/",
   },
   {
     id: "fastcutedits",
@@ -31,6 +33,8 @@ const PANELS: {
     cta: "View Work",
     href: "/portfolio",
     bg: panelDesign.url,
+    ig: "@fast.cuteditz",
+    igUrl: "https://www.instagram.com/fast.cuteditz/",
   },
   {
     id: "onixblvck",
@@ -40,6 +44,8 @@ const PANELS: {
     cta: "Enter the Vault",
     href: "#music",
     bg: panelMusic.url,
+    ig: "@iamonixblvck",
+    igUrl: "https://www.instagram.com/iamonixblvck/",
   },
 ];
 
