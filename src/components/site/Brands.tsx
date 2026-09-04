@@ -3,7 +3,17 @@ import panelTattoo from "@/assets/panel-tattoo.jpg.asset.json";
 import panelDesign from "@/assets/panel-design.jpg.asset.json";
 import panelMusic from "@/assets/panel-music.jpg.asset.json";
 
-const PANELS = [
+const PANELS: {
+  id: string;
+  name: string;
+  tag: string;
+  body: string;
+  cta: string;
+  href: string;
+  bg: string;
+  ig: string;
+  igUrl: string;
+}[] = [
   {
     id: "inknior",
     name: "InkNior",
@@ -12,6 +22,8 @@ const PANELS = [
     cta: "View Tattoos",
     href: "#pricing",
     bg: panelTattoo.url,
+    ig: "@inknior",
+    igUrl: "https://www.instagram.com/inknior/",
   },
   {
     id: "fastcutedits",
@@ -21,6 +33,8 @@ const PANELS = [
     cta: "View Work",
     href: "/portfolio",
     bg: panelDesign.url,
+    ig: "@fast.cuteditz",
+    igUrl: "https://www.instagram.com/fast.cuteditz/",
   },
   {
     id: "onixblvck",
@@ -30,6 +44,8 @@ const PANELS = [
     cta: "Enter the Vault",
     href: "#music",
     bg: panelMusic.url,
+    ig: "@iamonixblvck",
+    igUrl: "https://www.instagram.com/iamonixblvck/",
   },
 ];
 
@@ -58,8 +74,17 @@ export function Brands() {
                 {p.body}
               </p>
               <a
+                href={p.igUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-auto mt-5 inline-flex min-h-11 items-center gap-2 border border-border bg-secondary/50 px-4 text-[0.6rem] tracking-[0.2em] uppercase text-silver transition-colors hover:border-royal/60 hover:text-foreground"
+              >
+                <Instagram className="size-4" />
+                {p.ig}
+              </a>
+              <a
                 href={p.href}
-                className="mt-auto inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.24em] uppercase transition-colors hover:bg-royal/35"
+                className="mt-6 inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.24em] uppercase transition-colors hover:bg-royal/35"
               >
                 {p.cta} →
               </a>

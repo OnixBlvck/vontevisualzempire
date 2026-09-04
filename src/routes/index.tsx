@@ -6,6 +6,7 @@ import { Brands } from "@/components/site/Brands";
 import { PortfolioStrip } from "@/components/site/PortfolioStrip";
 import { About } from "@/components/site/About";
 import { Pricing } from "@/components/site/Pricing";
+import { AppSection } from "@/components/site/AppSection";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
@@ -41,6 +42,7 @@ function Index() {
         <PortfolioStrip />
         <About />
         <Pricing />
+        <AppSection />
         <Contact />
       </main>
       <Footer />
