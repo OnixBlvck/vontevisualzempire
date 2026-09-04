@@ -41,6 +41,7 @@ function Index() {
         <Hero />
         <Brands />
         <PortfolioStrip />
+        <VideoSection />
         <About />
         <Pricing />
         <AppSection />
