@@ -58,23 +58,36 @@ export function Footer() {
 
         <div>
           <p className="label-xs text-royal">Connect</p>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 grid gap-2">
             {[
-              { Icon: Instagram, label: "Instagram", href: "#contact" },
-              { Icon: Video, label: "TikTok", href: "#contact" },
-              { Icon: Youtube, label: "YouTube", href: "#contact" },
-              { Icon: Music2, label: "Spotify", href: "#onixblvck" },
-              { Icon: Mail, label: "Email", href: "mailto:vontevisualz@gmail.com" },
-            ].map(({ Icon, label, href }) => (
+              { label: "OnixBlvck", handle: "@iamonixblvck", href: "https://www.instagram.com/iamonixblvck/" },
+              { label: "FastCutEdits", handle: "@fast.cuteditz", href: "https://www.instagram.com/fast.cuteditz/" },
+              { label: "InkNior", handle: "@inknior", href: "https://www.instagram.com/inknior/" },
+            ].map((s) => (
               <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="grid size-9 place-items-center rounded-full border border-border bg-secondary/60 text-foreground/70 transition-colors hover:border-royal/60 hover:text-foreground"
+                key={s.handle}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center gap-2 text-[0.62rem] tracking-[0.16em] uppercase text-muted-foreground transition-colors hover:text-foreground"
               >
-                <Icon className="size-4" />
+                <Instagram className="size-4 text-royal" />
+                {s.label}
+                <span className="ml-auto normal-case tracking-normal">{s.handle}</span>
               </a>
             ))}
+            <a
+              href="mailto:vontevisualz@gmail.com"
+              className="flex min-h-11 items-center gap-2 text-[0.62rem] tracking-[0.16em] uppercase text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Mail className="size-4 text-royal" /> Email
+            </a>
+            <a
+              href="#app"
+              className="flex min-h-11 items-center gap-2 text-[0.62rem] tracking-[0.16em] uppercase text-gold/90 transition-colors hover:text-foreground"
+            >
+              VonteVisualz App — Coming Soon
+            </a>
           </div>
         </div>
 

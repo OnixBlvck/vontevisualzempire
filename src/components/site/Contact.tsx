@@ -1,4 +1,4 @@
-import { Mail, MapPin, Instagram, Youtube, Music2, Video } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import { toast } from "sonner";
 import vcardQr from "@/assets/vcard-qr.png.asset.json";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
@@ -22,20 +22,25 @@ export function Contact() {
               <MapPin className="size-3.5 text-royal" /> Houston, Texas
             </li>
           </ul>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 grid gap-2">
             {[
-              { Icon: Instagram, label: "Instagram" },
-              { Icon: Video, label: "TikTok" },
-              { Icon: Youtube, label: "YouTube" },
-              { Icon: Music2, label: "Music" },
-            ].map(({ Icon, label }) => (
-              <span
-                key={label}
-                aria-label={label}
-                className="grid size-9 place-items-center rounded-full border border-border bg-secondary/60 text-foreground/70"
+              { label: "OnixBlvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
+              { label: "FastCutEdits", handle: "@fast.cuteditz", url: "https://www.instagram.com/fast.cuteditz/" },
+              { label: "InkNior", handle: "@inknior", url: "https://www.instagram.com/inknior/" },
+            ].map((s) => (
+              <a
+                key={s.handle}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center gap-3 border border-border bg-secondary/50 px-3 text-[0.6rem] tracking-[0.18em] uppercase text-silver transition-colors hover:border-royal/60 hover:text-foreground"
               >
-                <Icon className="size-4" />
-              </span>
+                <Instagram className="size-4 text-royal" />
+                <span>{s.label}</span>
+                <span className="ml-auto normal-case tracking-normal text-muted-foreground">
+                  {s.handle}
+                </span>
+              </a>
             ))}
           </div>
         </div>
