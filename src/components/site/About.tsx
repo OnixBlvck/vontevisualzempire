@@ -22,22 +22,22 @@ export function About() {
             proof that pain can be turned into something permanent.
           </p>
           <p className="label-xs mt-5 text-[0.55rem] text-gold">
-            Onix Comes First. Then Comes The Empire.
+            Onyx Comes First. Then Comes The Empire.
           </p>
         </div>
 
-        {/* OnixBlvck story */}
+        {/* Onyx Blvck story */}
         <div id="onixblvck-story">
-          <p className="label-xs text-royal">OnixBlvck</p>
+          <p className="label-xs text-royal">Onyx Blvck</p>
           <h2 className="metal-text mt-2 text-2xl">Forged From The Ashes</h2>
           <img
             src={foundationPortrait.url}
-            alt="OnixBlvck portrait"
+            alt="Onyx Blvck portrait"
             loading="lazy"
             className="mt-5 h-40 w-full border border-border object-cover"
           />
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            OnixBlvck is the sound of real life — loss, loyalty, pressure, and everything learned
+            Onyx Blvck is the sound of real life — loss, loyalty, pressure, and everything learned
             the hard way. The songs aren't written to trend; they're written so the story survives
             longer than the moment that made it.
           </p>

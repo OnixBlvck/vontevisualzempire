@@ -24,7 +24,7 @@ export function Contact() {
           </ul>
           <div className="mt-5 grid gap-2">
             {[
-              { label: "OnixBlvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
+              { label: "Onyx Blvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
               { label: "FastCutEdits", handle: "@fast.cuteditz", url: "https://www.instagram.com/fast.cuteditz/" },
               { label: "InkNior", handle: "@inknior", url: "https://www.instagram.com/inknior/" },
             ].map((s) => (

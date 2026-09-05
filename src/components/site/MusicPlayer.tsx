@@ -73,7 +73,7 @@ export function MusicPlayer() {
             <p className="display truncate text-base tracking-[0.14em] text-silver sm:text-lg">
               Pop My Shit
             </p>
-            <p className="label-xs mt-1 text-[0.55rem] text-gold/90">OnixBlvck</p>
+            <p className="label-xs mt-1 text-[0.55rem] text-gold/90">Onyx Blvck</p>
 
             <div className="mt-3 flex items-center gap-2">
               <span className="w-8 text-[0.55rem] text-muted-foreground">{fmt(position)}</span>

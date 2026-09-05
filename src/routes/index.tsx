@@ -18,13 +18,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "VonteVisualz is the creative empire behind InkNior tattoo artistry, OnixBlvck music, and FastCutEdits design. Book your session in Houston, Texas.",
+          "VonteVisualz is the creative empire behind InkNior tattoo artistry, Onyx Blvck music, and FastCutEdits design. Book your session in Houston, Texas.",
       },
       { property: "og:title", content: "VonteVisualz | Creative Empire" },
       {
         property: "og:description",
         content:
-          "InkNior tattoos, OnixBlvck music, FastCutEdits design. Every story deserves to be seen.",
+          "InkNior tattoos, Onyx Blvck music, FastCutEdits design. Every story deserves to be seen.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
