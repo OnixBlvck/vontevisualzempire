@@ -74,7 +74,7 @@ export function Hero() {
           {/* Right artwork */}
           <img
             src={onixArt.url}
-            alt="OnixBlvck rose artwork"
+            alt="Onyx Blvck rose artwork"
             loading="lazy"
             className="mx-auto w-full max-w-[240px] border border-border object-cover lg:max-w-[280px]"
           />

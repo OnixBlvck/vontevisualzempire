@@ -19,7 +19,7 @@ export function AppSection() {
 
           <ul className="mt-6 grid gap-2 text-[0.65rem] tracking-[0.16em] uppercase text-silver">
             <li>InkNior — Tattoo</li>
-            <li>OnixBlvck — Music</li>
+            <li>Onyx Blvck — Music</li>
             <li>FastCutEdits — Design & Editing</li>
           </ul>
 
@@ -53,7 +53,7 @@ export function AppSection() {
           <div className="absolute inset-0 -z-10 blur-3xl bg-royal/20" aria-hidden />
           <img
             src={mockup.url}
-            alt="VonteVisualz mobile app mockup showing InkNior, OnixBlvck and FastCutEdits"
+            alt="VonteVisualz mobile app mockup showing InkNior, Onyx Blvck and FastCutEdits"
             loading="lazy"
             width={1024}
             height={1024}

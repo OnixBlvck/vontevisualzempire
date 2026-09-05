@@ -41,11 +41,11 @@ export function MusicPlayer() {
         <p className="label-xs text-[0.5rem] text-royal">Now Playing — The Music Vault</p>
 
         <div className="mt-3 grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
-          {/* Rose artwork is the player face */}
+          {/* Track cover art is the player face */}
           <div className="relative grid size-24 shrink-0 place-items-center sm:size-28">
             <img
               src={track.cover}
-              alt="Black rose player artwork"
+              alt="Pop My Shit cover art — Onyx Blvck"
               width={700}
               height={700}
               className="absolute inset-0 size-full rounded-full object-cover opacity-90"
@@ -73,7 +73,7 @@ export function MusicPlayer() {
             <p className="display truncate text-base tracking-[0.14em] text-silver sm:text-lg">
               Pop My Shit
             </p>
-            <p className="label-xs mt-1 text-[0.55rem] text-gold/90">OnixBlvck</p>
+            <p className="label-xs mt-1 text-[0.55rem] text-gold/90">Onyx Blvck</p>
 
             <div className="mt-3 flex items-center gap-2">
               <span className="w-8 text-[0.55rem] text-muted-foreground">{fmt(position)}</span>

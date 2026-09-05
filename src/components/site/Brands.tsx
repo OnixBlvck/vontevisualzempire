@@ -38,7 +38,7 @@ const PANELS: {
   },
   {
     id: "onixblvck",
-    name: "OnixBlvck",
+    name: "Onyx Blvck",
     tag: "Music / Artist Identity",
     body: "Songs written from real life. Every scar has a sound, and the vault keeps every one of them.",
     cta: "Enter the Vault",

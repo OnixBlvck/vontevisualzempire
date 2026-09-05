@@ -61,7 +61,7 @@ export function Footer() {
           <p className="label-xs text-royal">Connect</p>
           <div className="mt-4 grid gap-2">
             {[
-              { label: "OnixBlvck", handle: "@iamonixblvck", href: "https://www.instagram.com/iamonixblvck/" },
+              { label: "Onyx Blvck", handle: "@iamonixblvck", href: "https://www.instagram.com/iamonixblvck/" },
               { label: "FastCutEdits", handle: "@fast.cuteditz", href: "https://www.instagram.com/fast.cuteditz/" },
               { label: "InkNior", handle: "@inknior", href: "https://www.instagram.com/inknior/" },
             ].map((s) => (
@@ -129,7 +129,7 @@ export function Footer() {
         <div>
           <p className="label-xs text-royal">Empire</p>
           <ul className="mt-3 grid gap-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground">
-            <li><a href="#onixblvck" className="hover:text-foreground">OnixBlvck</a></li>
+            <li><a href="#onixblvck" className="hover:text-foreground">Onyx Blvck</a></li>
             <li><a href="#inknior" className="hover:text-foreground">InkNior</a></li>
             <li><a href="#fastcutedits" className="hover:text-foreground">FastCutEdits</a></li>
             <li><a href="#portfolio" className="hover:text-foreground">Portfolio</a></li>

@@ -9,7 +9,7 @@ import posterTattoo from "@/assets/panel-tattoo.jpg.asset.json";
 const REELS = [
   {
     id: "reel-onixblvck",
-    brand: "OnixBlvck",
+    brand: "Onyx Blvck",
     tag: "Music / Artist Identity",
     src: vidOnix.url,
     poster: posterMusic.url,

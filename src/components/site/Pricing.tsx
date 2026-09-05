@@ -8,7 +8,7 @@ const SERVICES = [
     note: "$30 deposit to secure your time",
   },
   {
-    brand: "OnixBlvck",
+    brand: "Onyx Blvck",
     tag: "Music Identity",
     items: ["Releases", "Cover Art", "Visual Rollout", "Artist Branding"],
     note: "Inquire for project scope",

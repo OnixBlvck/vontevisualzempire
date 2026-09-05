@@ -12,7 +12,7 @@ export const Route = createFileRoute("/portfolio")({
       {
         name: "description",
         content:
-          "Browse the VonteVisualz portfolio — OnixBlvck cover art, InkNior flyers, FastCutEdits video work and brand logos.",
+          "Browse the VonteVisualz portfolio — Onyx Blvck cover art, InkNior flyers, FastCutEdits video work and brand logos.",
       },
       { property: "og:title", content: "Portfolio | VonteVisualz" },
       {

@@ -1,6 +1,6 @@
-import { Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin, Instagram, Phone, Globe, Download } from "lucide-react";
 import { toast } from "sonner";
-import vcardQr from "@/assets/vcard-qr.png.asset.json";
+import vcardQr from "@/assets/empire-access-qr.png.asset.json";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 export function Contact() {
@@ -19,12 +19,20 @@ export function Contact() {
               </a>
             </li>
             <li className="flex items-center gap-2">
+              <Phone className="size-3.5 text-royal" />
+              <a href="tel:+18325997747" className="hover:text-foreground">(832) 599-7747</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Globe className="size-3.5 text-royal" />
+              <a href="https://vontevisualz.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">vontevisualz.com</a>
+            </li>
+            <li className="flex items-center gap-2">
               <MapPin className="size-3.5 text-royal" /> Houston, Texas
             </li>
           </ul>
           <div className="mt-5 grid gap-2">
             {[
-              { label: "OnixBlvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
+              { label: "Onyx Blvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
               { label: "FastCutEdits", handle: "@fast.cuteditz", url: "https://www.instagram.com/fast.cuteditz/" },
               { label: "InkNior", handle: "@inknior", url: "https://www.instagram.com/inknior/" },
             ].map((s) => (
@@ -115,15 +123,23 @@ export function Contact() {
             <p className="text-[0.6rem] tracking-[0.16em] uppercase text-muted-foreground">
               Houston, Texas
             </p>
-            <p className="mt-2 text-[0.62rem] text-muted-foreground">vontevisualz@gmail.com</p>
-            <p className="text-[0.62rem] text-muted-foreground">VonteVisualz.com</p>
+            <a href="tel:+18325997747" className="mt-2 block text-[0.62rem] text-muted-foreground hover:text-foreground">(832) 599-7747</a>
+            <a href="mailto:vontevisualz@gmail.com" className="block text-[0.62rem] text-muted-foreground hover:text-foreground">vontevisualz@gmail.com</a>
+            <a href="https://vontevisualz.com" target="_blank" rel="noopener noreferrer" className="block text-[0.62rem] text-muted-foreground hover:text-foreground">vontevisualz.com</a>
             <img
               src={vcardQr.url}
-              alt="QR code to save VonteVisualz contact"
+              alt="QR code linking to vontevisualz.com"
               loading="lazy"
               className="mx-auto mt-5 size-32 bg-white p-2"
             />
-            <p className="label-xs mt-3 text-[0.55rem] text-gold">Scan To Save Contact</p>
+            <p className="label-xs mt-3 text-[0.55rem] text-gold">Scan To Connect</p>
+            <a
+              href="/vontevisualz.vcf"
+              download="vontevisualz.vcf"
+              className="mt-4 inline-flex min-h-11 items-center gap-2 border border-royal/50 bg-royal/15 px-5 text-[0.6rem] tracking-[0.2em] uppercase transition-colors hover:bg-royal/35"
+            >
+              <Download className="size-3.5" /> Save Contact
+            </a>
           </div>
         </div>
       </div>
