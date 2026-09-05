@@ -41,11 +41,11 @@ export function MusicPlayer() {
         <p className="label-xs text-[0.5rem] text-royal">Now Playing — The Music Vault</p>
 
         <div className="mt-3 grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
-          {/* Rose artwork is the player face */}
+          {/* Track cover art is the player face */}
           <div className="relative grid size-24 shrink-0 place-items-center sm:size-28">
             <img
               src={track.cover}
-              alt="Black rose player artwork"
+              alt="Pop My Shit cover art — Onyx Blvck"
               width={700}
               height={700}
               className="absolute inset-0 size-full rounded-full object-cover opacity-90"
