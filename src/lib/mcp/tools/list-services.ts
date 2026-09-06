@@ -1,6 +1,15 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 
-const SERVICES = [
+type Business = {
+  business: string;
+  brand: string;
+  focus: string;
+  services: string[];
+  pricing_note: string;
+  instagram: string;
+};
+
+const SERVICES: Business[] = [
   {
     business: "inknior",
     brand: "InkNior",
@@ -25,7 +34,7 @@ const SERVICES = [
     pricing_note: "Inquire for project scope",
     instagram: "https://www.instagram.com/fast.cuteditz/",
   },
-] as const;
+];
 
 export default defineTool({
   name: "list_services",
