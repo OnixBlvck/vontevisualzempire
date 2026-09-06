@@ -43,7 +43,6 @@ export default defineTool({
     if (error) return { content: [{ type: "text", text: error.message }], isError: true };
     return {
       content: [{ type: "text", text: `Booking request saved.\n${JSON.stringify(data, null, 2)}` }],
-      structuredContent: { request: data as Record<string, unknown> },
     };
   },
 });
