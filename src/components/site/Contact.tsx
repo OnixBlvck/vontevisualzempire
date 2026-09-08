@@ -1,5 +1,5 @@
 import { Mail, MapPin, Instagram, Phone, Globe, Download } from "lucide-react";
-import { toast } from "sonner";
+import { BookingForm } from "@/components/site/BookingForm";
 import vcardQr from "@/assets/empire-access-qr.png.asset.json";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
