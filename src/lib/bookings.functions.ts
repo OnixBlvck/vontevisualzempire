@@ -5,7 +5,8 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 export const BUSINESSES = ["inknior", "onyxblvck", "fastcutedits"] as const;
 
 const bookingInput = z.object({
-  business: z.enum(BUSINESSES),
+  // "message" covers the general Send A Message form; it lands in the same inbox.
+  business: z.enum([...BUSINESSES, "message"]),
   full_name: z.string().trim().min(1).max(120),
   contact_email: z.string().trim().email().max(160),
   details: z.string().trim().min(1).max(2000),
