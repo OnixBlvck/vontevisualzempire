@@ -69,43 +69,8 @@ export function Contact() {
           </a>
         </div>
 
-        {/* 3 — Send a message */}
-        <div>
-          <p className="label-xs text-royal">Message</p>
-          <h2 className="metal-text mt-2 text-2xl">Send A Message</h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              toast.success("Message sent. I'll get back to you.");
-              (e.currentTarget as HTMLFormElement).reset();
-            }}
-            className="mt-5 grid gap-3"
-          >
-            <input
-              required
-              placeholder="Name"
-              className="border border-input bg-background/60 px-3 py-2 text-xs outline-none focus:border-royal"
-            />
-            <input
-              required
-              type="email"
-              placeholder="Email"
-              className="border border-input bg-background/60 px-3 py-2 text-xs outline-none focus:border-royal"
-            />
-            <textarea
-              required
-              rows={4}
-              placeholder="What are we building?"
-              className="border border-input bg-background/60 px-3 py-2 text-xs outline-none focus:border-royal"
-            />
-            <button
-              type="submit"
-              className="border border-royal/60 bg-royal/25 px-5 py-3 text-[0.62rem] tracking-[0.22em] uppercase transition-colors hover:bg-royal/45"
-            >
-              Send
-            </button>
-          </form>
-        </div>
+        {/* 3 — Booking request */}
+        <BookingForm />
 
         {/* 4 — Digital business card */}
         <div>
