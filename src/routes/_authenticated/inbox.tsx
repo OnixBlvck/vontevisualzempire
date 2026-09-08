@@ -8,6 +8,7 @@ const BRANDS: Record<string, string> = {
   inknior: "InkNior — Tattoo",
   onyxblvck: "Onyx Blvck — Music",
   fastcutedits: "FastCutEdits — Design",
+  message: "Direct Message",
 };
 
 export const Route = createFileRoute("/_authenticated/inbox")({

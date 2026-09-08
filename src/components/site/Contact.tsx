@@ -1,5 +1,6 @@
 import { Mail, MapPin, Instagram, Phone, Globe, Download } from "lucide-react";
 import { BookingForm } from "@/components/site/BookingForm";
+import { MessageForm } from "@/components/site/MessageForm";
 import vcardQr from "@/assets/empire-access-qr.png.asset.json";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
@@ -61,12 +62,7 @@ export function Contact() {
             Tattoos, music, design, or a full visual rollout — if you're building something that
             deserves to be seen, bring it here. Every project starts with a conversation.
           </p>
-          <a
-            href="mailto:vontevisualz@gmail.com"
-            className="mt-6 inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.22em] uppercase transition-colors hover:bg-royal/35"
-          >
-            Start A Project →
-          </a>
+          <MessageForm />
         </div>
 
         {/* 3 — Booking request */}
