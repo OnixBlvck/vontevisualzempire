@@ -9,8 +9,8 @@ import listMyBookingRequestsTool from "./tools/list-my-booking-requests";
 const projectRef = import.meta.env['VITE_SUPABASE_PROJECT_ID'] ?? "project-ref-unset";
 
 export default defineMcp({
-  name: "the-onixblvck-visions",
-  title: "The OnixBlvck Visions",
+  name: "vontevisualz-empire",
+  title: "VonteVisualz Empire",
   version: "0.1.0",
   instructions:
     "Tools for VonteVisualz — the creative empire behind InkNior (tattoo), Onyx Blvck (music) and FastCutEdits (design). Use `list_services` and `list_portfolio` to explore the work, `create_booking_request` to submit a booking for the signed-in person, and `list_my_booking_requests` to review their own requests.",
