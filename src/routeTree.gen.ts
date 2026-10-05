@@ -12,10 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CardRouteImport } from './routes/card'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as AuthenticatedInboxRouteImport } from './routes/_authenticated/inbox'
+import { Route as VontevisualzComRouteImport } from './routes/vontevisualz.com'
 import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 
 const IndexRoute = IndexRouteImport.update({
@@ -30,6 +32,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CardRoute = CardRouteImport.update({
+  id: '/card',
+  path: '/card',
   getParentRoute: () => rootRouteImport,
 } as any)
 const McpRoute = McpRouteImport.update({
@@ -53,6 +60,11 @@ const AuthenticatedInboxRoute = AuthenticatedInboxRouteImport.update({
   path: '/inbox',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const VontevisualzComRoute = VontevisualzComRouteImport.update({
+  id: '/vontevisualz/com',
+  path: '/vontevisualz/com',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
   id: '/.lovable/oauth/consent',
   path: '/.lovable/oauth/consent',
@@ -62,19 +74,23 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/inbox': typeof AuthenticatedInboxRoute
+  '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/inbox': typeof AuthenticatedInboxRoute
+  '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
 export interface FileRoutesById {
@@ -82,10 +98,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
+  '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/_authenticated/inbox': typeof AuthenticatedInboxRoute
+  '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
 export interface FileRouteTypes {
@@ -93,29 +111,35 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/auth'
+    | '/card'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/inbox'
+    | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/auth'
+    | '/card'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/inbox'
+    | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   id:
     | '__root__'
     | '/'
     | '/_authenticated'
     | '/auth'
+    | '/card'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/_authenticated/inbox'
+    | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   fileRoutesById: FileRoutesById
 }
@@ -123,9 +147,11 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
+  CardRoute: typeof CardRoute
   McpRoute: typeof McpRoute
   PortfolioRoute: typeof PortfolioRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  VontevisualzComRoute: typeof VontevisualzComRoute
   DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
 }
 
@@ -150,6 +176,13 @@ declare module '@tanstack/react-router' {
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/card': {
+      id: '/card'
+      path: '/card'
+      fullPath: '/card'
+      preLoaderRoute: typeof CardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -180,6 +213,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedInboxRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/vontevisualz/com': {
+      id: '/vontevisualz/com'
+      path: '/vontevisualz/com'
+      fullPath: '/vontevisualz/com'
+      preLoaderRoute: typeof VontevisualzComRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/.lovable/oauth/consent': {
       id: '/.lovable/oauth/consent'
       path: '/.lovable/oauth/consent'
@@ -205,10 +245,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
+  CardRoute: CardRoute,
   McpRoute: McpRoute,
   PortfolioRoute: PortfolioRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  VontevisualzComRoute: VontevisualzComRoute,
   DotlovableOauthConsentRoute: DotlovableOauthConsentRoute,
 }
 export const routeTree = rootRouteImport
