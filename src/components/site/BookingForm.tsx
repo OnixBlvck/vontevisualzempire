@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useServerFn } from "@tanstack/react-start";
+import { useNavigate } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { createBookingRequest } from "@/lib/bookings.functions";
 
@@ -26,6 +27,7 @@ const inputClass =
 
 export function BookingForm() {
   const submitBooking = useServerFn(createBookingRequest);
+  const navigate = useNavigate();
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   const [busy, setBusy] = useState(false);
   const [business, setBusiness] = useState("inknior");
@@ -59,8 +61,8 @@ export function BookingForm() {
           preferred_date: String(fd.get("preferred_date") ?? ""),
         },
       });
-      toast.success("Request received. I'll review it and reply by email.");
       form.reset();
+      void navigate({ to: "/booking-received" });
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Could not send your request.");
     } finally {

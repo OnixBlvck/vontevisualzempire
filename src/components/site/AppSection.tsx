@@ -74,8 +74,8 @@ export function AppSection() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <AppLink Icon={Apple} label="iOS" href={LIVE_SITE_URL} isComingSoon />
-            <AppLink Icon={Smartphone} label="Android" href={LIVE_SITE_URL} isComingSoon />
+            <AppLink Icon={Apple} label="iOS" href="/app" isComingSoon />
+            <AppLink Icon={Smartphone} label="Android" href="/app" isComingSoon />
           </div>
         </div>
 
