@@ -1,6 +1,8 @@
 import { Apple, Smartphone } from "lucide-react";
 import mockup from "@/assets/app-mockup.jpg.asset.json";
 
+const LIVE_SITE_URL = "https://vontevisualz.com";
+
 interface AppLinkProps {
   Icon: any;
   label: string;
@@ -11,11 +13,10 @@ interface AppLinkProps {
 function AppLink({ Icon, label, href, isComingSoon }: AppLinkProps) {
   if (isComingSoon) {
     return (
-      <button
-        type="button"
-        disabled
-        aria-disabled
-        className="flex cursor-not-allowed items-center gap-3 border border-border bg-secondary/50 px-5 py-3 text-left opacity-80"
+      <a
+        href={href}
+        aria-label={`${label} app coming soon — visit the live site`}
+        className="flex items-center gap-3 border border-border bg-secondary/50 px-5 py-3 text-left transition-colors hover:border-royal/60"
       >
         <Icon className="size-5 text-silver" />
         <span className="grid">
@@ -26,7 +27,7 @@ function AppLink({ Icon, label, href, isComingSoon }: AppLinkProps) {
             Coming Soon
           </span>
         </span>
-      </button>
+      </a>
     );
   }
 
@@ -73,13 +74,14 @@ export function AppSection() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <AppLink Icon={Apple} label="iOS" href="#" isComingSoon />
-            <AppLink Icon={Smartphone} label="Android" href="#" isComingSoon />
+            <AppLink Icon={Apple} label="iOS" href={LIVE_SITE_URL} isComingSoon />
+            <AppLink Icon={Smartphone} label="Android" href={LIVE_SITE_URL} isComingSoon />
           </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-[360px]">
           <div className="absolute inset-0 -z-10 blur-3xl bg-royal/20" aria-hidden />
+          <a href={LIVE_SITE_URL} aria-label="Visit the VonteVisualz live site">
           <img
             src={mockup.url}
             alt="VonteVisualz mobile app mockup showing InkNior, Onyx Blvck and FastCutEdits"
@@ -88,6 +90,7 @@ export function AppSection() {
             height={1024}
             className="w-full border border-border object-contain"
           />
+          </a>
         </div>
       </div>
     </section>
