@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as BookingReceivedRouteImport } from './routes/booking-received'
 import { Route as CardRouteImport } from './routes/card'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
@@ -29,9 +31,19 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingReceivedRoute = BookingReceivedRouteImport.update({
+  id: '/booking-received',
+  path: '/booking-received',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CardRoute = CardRouteImport.update({
@@ -73,7 +85,9 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app': typeof AppRoute
   '/auth': typeof AuthRoute
+  '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
@@ -84,7 +98,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app': typeof AppRoute
   '/auth': typeof AuthRoute
+  '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
@@ -97,7 +113,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/app': typeof AppRoute
   '/auth': typeof AuthRoute
+  '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
@@ -110,7 +128,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/app'
     | '/auth'
+    | '/booking-received'
     | '/card'
     | '/mcp'
     | '/portfolio'
@@ -121,7 +141,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/app'
     | '/auth'
+    | '/booking-received'
     | '/card'
     | '/mcp'
     | '/portfolio'
@@ -133,7 +155,9 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_authenticated'
+    | '/app'
     | '/auth'
+    | '/booking-received'
     | '/card'
     | '/mcp'
     | '/portfolio'
@@ -146,7 +170,9 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AppRoute: typeof AppRoute
   AuthRoute: typeof AuthRoute
+  BookingReceivedRoute: typeof BookingReceivedRoute
   CardRoute: typeof CardRoute
   McpRoute: typeof McpRoute
   PortfolioRoute: typeof PortfolioRoute
@@ -171,11 +197,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/booking-received': {
+      id: '/booking-received'
+      path: '/booking-received'
+      fullPath: '/booking-received'
+      preLoaderRoute: typeof BookingReceivedRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/card': {
@@ -244,7 +284,9 @@ const AuthenticatedRouteRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AppRoute: AppRoute,
   AuthRoute: AuthRoute,
+  BookingReceivedRoute: BookingReceivedRoute,
   CardRoute: CardRoute,
   McpRoute: McpRoute,
   PortfolioRoute: PortfolioRoute,
