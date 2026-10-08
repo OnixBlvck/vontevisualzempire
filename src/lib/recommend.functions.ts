@@ -37,10 +37,8 @@ export const recommendBusiness = createServerFn({ method: "POST" })
     try {
       const result = streamText({
         model: provider.responses("openai/gpt-6-astra"),
-        messages: [
-          { role: "system", content: INSTRUCTIONS },
-          { role: "user", content: data.description },
-        ],
+        instructions: INSTRUCTIONS,
+        messages: [{ role: "user", content: data.description }],
         output: Output.object({ schema: recommendationSchema }),
         maxRetries: 0,
         providerOptions: {
