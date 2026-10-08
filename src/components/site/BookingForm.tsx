@@ -102,7 +102,7 @@ export function BookingForm() {
             Service
           </label>
           <select id="booking-service" name="service" required className={inputClass} key={business}>
-            {SERVICES[business].map((svc) => (
+            {(SERVICES[business] ?? []).map((svc) => (
               <option key={svc} value={svc}>
                 {svc}
               </option>
