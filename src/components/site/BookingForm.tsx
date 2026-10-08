@@ -10,6 +10,17 @@ const BUSINESS_OPTIONS = [
   { value: "fastcutedits", label: "FastCutEdits — Design" },
 ];
 
+const SERVICES: Record<string, string[]> = {
+  inknior: ["Names & Lettering", "Blackwork", "Realism"],
+  onyxblvck: ["Hook Only", "Verse Only", "Full Songwriting", "Recording", "Features", "Beats", "Mixing/Mastering"],
+  fastcutedits: ["Flyers", "Graphic Edits", "Cover Art", "Branding Package", "Web Design"],
+};
+
+const TIME_OPTIONS = Array.from({ length: 11 }, (_, i) => {
+  const h = 10 + i;
+  return `${h > 12 ? h - 12 : h}:00 ${h >= 12 ? "PM" : "AM"}`;
+});
+
 const inputClass =
   "border border-input bg-background/60 px-3 py-2 text-xs outline-none focus:border-royal";
 
@@ -17,6 +28,13 @@ export function BookingForm() {
   const submitBooking = useServerFn(createBookingRequest);
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   const [busy, setBusy] = useState(false);
+  const [business, setBusiness] = useState("inknior");
+  const [minDate, setMinDate] = useState("");
+  useEffect(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 1);
+    setMinDate(d.toISOString().slice(0, 10));
+  }, []);
 
   useEffect(() => {
     void supabase.auth.getSession().then(({ data }) => setSignedIn(!!data.session));
@@ -37,7 +55,7 @@ export function BookingForm() {
           business: String(fd.get("business")) as "inknior" | "onyxblvck" | "fastcutedits",
           full_name: String(fd.get("full_name")),
           contact_email: String(fd.get("contact_email")),
-          details: String(fd.get("details")),
+          details: `Service: ${String(fd.get("service"))}\nRequested time: ${String(fd.get("preferred_time"))}\n\n${String(fd.get("details"))}`,
           preferred_date: String(fd.get("preferred_date") ?? ""),
         },
       });
@@ -72,10 +90,21 @@ export function BookingForm() {
           <label className="sr-only" htmlFor="booking-business">
             Business
           </label>
-          <select id="booking-business" name="business" required className={inputClass} defaultValue="inknior">
+          <select id="booking-business" name="business" required className={inputClass} value={business} onChange={(e) => setBusiness(e.target.value)}>
             {BUSINESS_OPTIONS.map((o) => (
               <option key={o.value} value={o.value}>
                 {o.label}
+              </option>
+            ))}
+          </select>
+
+          <label className="sr-only" htmlFor="booking-service">
+            Service
+          </label>
+          <select id="booking-service" name="service" required className={inputClass} key={business}>
+            {SERVICES[business].map((svc) => (
+              <option key={svc} value={svc}>
+                {svc}
               </option>
             ))}
           </select>
@@ -98,9 +127,23 @@ export function BookingForm() {
           />
 
           <label className="label-xs text-[0.55rem] text-muted-foreground" htmlFor="booking-date">
-            Preferred date (optional)
+            Date
           </label>
-          <input id="booking-date" name="preferred_date" type="date" className={inputClass} />
+          <input id="booking-date" name="preferred_date" type="date" required min={minDate} className={inputClass} />
+
+          <label className="label-xs text-[0.55rem] text-muted-foreground" htmlFor="booking-time">
+            Time
+          </label>
+          <select id="booking-time" name="preferred_time" required className={inputClass} defaultValue="">
+            <option value="" disabled>
+              Select a time
+            </option>
+            {TIME_OPTIONS.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
 
           <label className="sr-only" htmlFor="booking-details">
             Details
