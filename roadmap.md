@@ -5,3 +5,6 @@
 - [x] Booking inbox (name, date, message, status)
 - [x] Homepage "Send A Message" form saved to the same inbox
 - [ ] Publish the live site
+- [x] AI event recommender (InkNior / Onyx Blvck / FastCutEdits)
+- [x] Booking calendar saves service/date/time to inbox (verify)
+- [x] App mockup + Coming Soon buttons → live site; agent entry uses canonical link (verify)

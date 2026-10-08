@@ -85,7 +85,7 @@ function Inbox() {
                 {r.status}
               </span>
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{r.details}</p>
+            <p className="mt-3 whitespace-pre-line text-xs leading-relaxed text-muted-foreground">{r.details}</p>
             <dl className="mt-4 grid gap-1 text-[0.6rem] tracking-[0.14em] uppercase text-muted-foreground">
               <div className="flex gap-2">
                 <dt>Name</dt>
