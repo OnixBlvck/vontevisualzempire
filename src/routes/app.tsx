@@ -3,6 +3,7 @@ import { Apple, Smartphone, Globe } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import mockup from "@/assets/app-mockup.jpg.asset.json";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -25,15 +26,15 @@ const FEATURES = [
   { title: "Portfolio", body: "Browse tattoo, design, music and video work." },
 ];
 
-function StoreButton({ Icon, label }: { Icon: typeof Apple; label: string }) {
+function StoreButton({ Icon, label, to }: { Icon: typeof Apple; label: string; to: "/app/ios" | "/app/android" }) {
   return (
-    <button type="button" disabled aria-disabled className="flex cursor-not-allowed items-center gap-3 border border-border bg-secondary/50 px-5 py-3 text-left opacity-80">
+    <Button asChild variant="secondary" className="h-auto gap-3 border border-border px-5 py-3 text-left"><Link to={to} aria-label={`${label} app preview — coming soon`}>
       <Icon className="size-5 text-silver" />
       <span className="grid">
         <span className="text-[0.6rem] tracking-[0.2em] uppercase">{label}</span>
         <span className="text-[0.55rem] tracking-[0.22em] uppercase text-gold/90">Coming Soon</span>
       </span>
-    </button>
+    </Link></Button>
   );
 }
 
@@ -48,11 +49,11 @@ function AppPage() {
             <p className="label-xs text-royal">Empire Access</p>
             <h1 className="metal-text mt-2 text-4xl">VonteVisualz App</h1>
             <p className="mt-4 max-w-[46ch] text-xs leading-relaxed text-muted-foreground">
-              The mobile app is in development and not yet in the App Store or Google Play. Everything it will do is available now on the live site.
+              The mobile app is not released and is not yet in the App Store or Google Play. Explore the platform previews or use the web version today.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <StoreButton Icon={Apple} label="iOS" />
-              <StoreButton Icon={Smartphone} label="Android" />
+              <StoreButton Icon={Apple} label="iOS" to="/app/ios" />
+              <StoreButton Icon={Smartphone} label="Android" to="/app/android" />
               <Link to="/" className="flex items-center gap-3 border border-royal/60 bg-royal/25 px-5 py-3 transition-colors hover:bg-royal/45">
                 <Globe className="size-5 text-silver" />
                 <span className="grid">

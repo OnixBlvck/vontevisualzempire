@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Add iOS and Android preview pages with screenshots, features, and honest Coming Soon downloads; update agent entry (desktop/mobile navigation and screenshot viewer verified; manifest regenerated)
+
 - [x] MCP agent entry (VonteVisualz Empire) with booking tools
 - [x] Booking form wired to private requests table
 - [x] Booking inbox (name, date, message, status)

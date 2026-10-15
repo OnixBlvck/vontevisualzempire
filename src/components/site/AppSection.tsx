@@ -15,7 +15,7 @@ function AppLink({ Icon, label, href, isComingSoon }: AppLinkProps) {
     return (
       <a
         href={href}
-        aria-label={`${label} app coming soon — visit the live site`}
+        aria-label={`${label} app coming soon — view platform preview`}
         className="flex items-center gap-3 border border-border bg-secondary/50 px-5 py-3 text-left transition-colors hover:border-royal/60"
       >
         <Icon className="size-5 text-silver" />
@@ -74,8 +74,8 @@ export function AppSection() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <AppLink Icon={Apple} label="iOS" href="/app" isComingSoon />
-            <AppLink Icon={Smartphone} label="Android" href="/app" isComingSoon />
+            <AppLink Icon={Apple} label="iOS" href="/app/ios" isComingSoon />
+            <AppLink Icon={Smartphone} label="Android" href="/app/android" isComingSoon />
           </div>
         </div>
 
