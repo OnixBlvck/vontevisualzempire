@@ -23,6 +23,14 @@ function oauthApi(): OAuthApi {
 }
 
 export const Route = createFileRoute("/.lovable/oauth/consent")({
+  head: () => ({ meta: [
+    { title: "Connect an Assistant | VonteVisualz" },
+    { name: "description", content: "Review and approve assistant access to your VonteVisualz booking requests." },
+    { property: "og:title", content: "Connect an Assistant | VonteVisualz" },
+    { property: "og:description", content: "Manage assistant access to your VonteVisualz account." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+  ] }),
   ssr: false,
   validateSearch: (s: Record<string, unknown>) => ({
     authorization_id: typeof s['authorization_id'] === "string" ? s['authorization_id'] : "",
