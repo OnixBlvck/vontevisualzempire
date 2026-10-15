@@ -19,6 +19,8 @@ import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as AuthenticatedInboxRouteImport } from './routes/_authenticated/inbox'
+import { Route as AppAndroidRouteImport } from './routes/app_.android'
+import { Route as AppIosRouteImport } from './routes/app_.ios'
 import { Route as VontevisualzComRouteImport } from './routes/vontevisualz.com'
 import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 
@@ -72,6 +74,16 @@ const AuthenticatedInboxRoute = AuthenticatedInboxRouteImport.update({
   path: '/inbox',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AppAndroidRoute = AppAndroidRouteImport.update({
+  id: '/app_/android',
+  path: '/app/android',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppIosRoute = AppIosRouteImport.update({
+  id: '/app_/ios',
+  path: '/app/ios',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VontevisualzComRoute = VontevisualzComRouteImport.update({
   id: '/vontevisualz/com',
   path: '/vontevisualz/com',
@@ -93,6 +105,8 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/inbox': typeof AuthenticatedInboxRoute
+  '/app/android': typeof AppAndroidRoute
+  '/app/ios': typeof AppIosRoute
   '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
@@ -106,6 +120,8 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/inbox': typeof AuthenticatedInboxRoute
+  '/app/android': typeof AppAndroidRoute
+  '/app/ios': typeof AppIosRoute
   '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
@@ -121,6 +137,8 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/_authenticated/inbox': typeof AuthenticatedInboxRoute
+  '/app_/android': typeof AppAndroidRoute
+  '/app_/ios': typeof AppIosRoute
   '/vontevisualz/com': typeof VontevisualzComRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
 }
@@ -136,6 +154,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/inbox'
+    | '/app/android'
+    | '/app/ios'
     | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   fileRoutesByTo: FileRoutesByTo
@@ -149,6 +169,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/inbox'
+    | '/app/android'
+    | '/app/ios'
     | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   id:
@@ -163,6 +185,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
     | '/_authenticated/inbox'
+    | '/app_/android'
+    | '/app_/ios'
     | '/vontevisualz/com'
     | '/.lovable/oauth/consent'
   fileRoutesById: FileRoutesById
@@ -177,6 +201,8 @@ export interface RootRouteChildren {
   McpRoute: typeof McpRoute
   PortfolioRoute: typeof PortfolioRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
+  AppAndroidRoute: typeof AppAndroidRoute
+  AppIosRoute: typeof AppIosRoute
   VontevisualzComRoute: typeof VontevisualzComRoute
   DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
 }
@@ -253,6 +279,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedInboxRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/app_/android': {
+      id: '/app_/android'
+      path: '/app/android'
+      fullPath: '/app/android'
+      preLoaderRoute: typeof AppAndroidRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app_/ios': {
+      id: '/app_/ios'
+      path: '/app/ios'
+      fullPath: '/app/ios'
+      preLoaderRoute: typeof AppIosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vontevisualz/com': {
       id: '/vontevisualz/com'
       path: '/vontevisualz/com'
@@ -292,6 +332,8 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
+  AppAndroidRoute: AppAndroidRoute,
+  AppIosRoute: AppIosRoute,
   VontevisualzComRoute: VontevisualzComRoute,
   DotlovableOauthConsentRoute: DotlovableOauthConsentRoute,
 }
