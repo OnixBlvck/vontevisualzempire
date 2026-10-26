@@ -15,6 +15,7 @@ import { Route as AppRouteImport } from './routes/app'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as BookingReceivedRouteImport } from './routes/booking-received'
 import { Route as CardRouteImport } from './routes/card'
+import { Route as MakeItMakeSenseRouteImport } from './routes/make-it-make-sense'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
@@ -51,6 +52,11 @@ const BookingReceivedRoute = BookingReceivedRouteImport.update({
 const CardRoute = CardRouteImport.update({
   id: '/card',
   path: '/card',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MakeItMakeSenseRoute = MakeItMakeSenseRouteImport.update({
+  id: '/make-it-make-sense',
+  path: '/make-it-make-sense',
   getParentRoute: () => rootRouteImport,
 } as any)
 const McpRoute = McpRouteImport.update({
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
+  '/make-it-make-sense': typeof MakeItMakeSenseRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
+  '/make-it-make-sense': typeof MakeItMakeSenseRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/booking-received': typeof BookingReceivedRoute
   '/card': typeof CardRoute
+  '/make-it-make-sense': typeof MakeItMakeSenseRoute
   '/mcp': typeof McpRoute
   '/portfolio': typeof PortfolioRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/booking-received'
     | '/card'
+    | '/make-it-make-sense'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/booking-received'
     | '/card'
+    | '/make-it-make-sense'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/booking-received'
     | '/card'
+    | '/make-it-make-sense'
     | '/mcp'
     | '/portfolio'
     | '/.well-known/oauth-protected-resource'
@@ -198,6 +210,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   BookingReceivedRoute: typeof BookingReceivedRoute
   CardRoute: typeof CardRoute
+  MakeItMakeSenseRoute: typeof MakeItMakeSenseRoute
   McpRoute: typeof McpRoute
   PortfolioRoute: typeof PortfolioRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -249,6 +262,13 @@ declare module '@tanstack/react-router' {
       path: '/card'
       fullPath: '/card'
       preLoaderRoute: typeof CardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/make-it-make-sense': {
+      id: '/make-it-make-sense'
+      path: '/make-it-make-sense'
+      fullPath: '/make-it-make-sense'
+      preLoaderRoute: typeof MakeItMakeSenseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -328,6 +348,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   BookingReceivedRoute: BookingReceivedRoute,
   CardRoute: CardRoute,
+  MakeItMakeSenseRoute: MakeItMakeSenseRoute,
   McpRoute: McpRoute,
   PortfolioRoute: PortfolioRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
