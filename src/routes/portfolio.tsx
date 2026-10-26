@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/site/Header";
 import { Portfolio } from "@/components/site/Portfolio";
 import { Footer } from "@/components/site/Footer";
@@ -36,7 +35,6 @@ function PortfolioPage() {
         <Portfolio openId={openId} onOpen={setOpenId} />
       </main>
       <Footer />
-      <Toaster />
     </div>
   );
 }
