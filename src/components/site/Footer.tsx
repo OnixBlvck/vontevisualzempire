@@ -3,17 +3,17 @@ import { toast } from "sonner";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 const QUICK_A = [
-  { label: "Home", href: "#home" },
-  { label: "Music", href: "#music" },
-  { label: "Tattoo", href: "#inknior" },
-  { label: "Design", href: "#fastcutedits" },
+  { label: "Home", href: "/#home" },
+  { label: "Music", href: "/#music" },
+  { label: "Tattoo", href: "/#inknior" },
+  { label: "Design", href: "/#fastcutedits" },
 ];
 const QUICK_B = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Video", href: "#video" },
-  { label: "About", href: "#about" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Video", href: "/#video" },
+  { label: "About", href: "/#about" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Footer() {
@@ -84,7 +84,7 @@ export function Footer() {
               <Mail className="size-4 text-royal" /> Email
             </a>
             <a
-              href="#app"
+              href="/#app"
               className="flex min-h-11 items-center gap-2 text-[0.62rem] tracking-[0.16em] uppercase text-gold/90 transition-colors hover:text-foreground"
             >
               VonteVisualz App — Coming Soon
@@ -129,19 +129,19 @@ export function Footer() {
         <div>
           <p className="label-xs text-royal">Empire</p>
           <ul className="mt-3 grid gap-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground">
-            <li><a href="#onixblvck" className="hover:text-foreground">Onyx Blvck</a></li>
-            <li><a href="#inknior" className="hover:text-foreground">InkNior</a></li>
-            <li><a href="#fastcutedits" className="hover:text-foreground">FastCutEdits</a></li>
-            <li><a href="#portfolio" className="hover:text-foreground">Portfolio</a></li>
+            <li><a href="/#onixblvck" className="hover:text-foreground">Onyx Blvck</a></li>
+            <li><a href="/#inknior" className="hover:text-foreground">InkNior</a></li>
+            <li><a href="/#fastcutedits" className="hover:text-foreground">FastCutEdits</a></li>
+            <li><a href="/#portfolio" className="hover:text-foreground">Portfolio</a></li>
           </ul>
         </div>
         <div>
           <p className="label-xs text-royal">Work</p>
           <ul className="mt-3 grid gap-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground">
-            <li><a href="#pricing" className="hover:text-foreground">Pricing</a></li>
-            <li><a href="#booking" className="hover:text-foreground">Process</a></li>
-            <li><a href="#booking" className="hover:text-foreground">Booking</a></li>
-            <li><a href="#about" className="hover:text-foreground">My Story</a></li>
+            <li><a href="/#pricing" className="hover:text-foreground">Pricing</a></li>
+            <li><a href="/#booking" className="hover:text-foreground">Process</a></li>
+            <li><a href="/#booking" className="hover:text-foreground">Booking</a></li>
+            <li><a href="/#about" className="hover:text-foreground">My Story</a></li>
           </ul>
         </div>
         <div>
