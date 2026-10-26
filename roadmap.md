@@ -12,3 +12,5 @@
 - [x] App mockup + Coming Soon buttons → live site; agent entry uses canonical link (verify)
 - [x] /app page and /booking-received page
 - [ ] Connect vontevisualz.com (blocked: domain not registered)
+- [x] Launch audit pass: fixed menu/footer links on secondary pages, honest newsletter signup, footer phone/card links, notices on every page, Make It Make Sense page
+- [ ] Re-ask skipped setup questions one at a time (prices, database, Make It Make Sense content, Square/WhatsApp) — waiting on answers before further changes

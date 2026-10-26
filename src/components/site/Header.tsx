@@ -3,16 +3,16 @@ import { Menu, X } from "lucide-react";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
 
 const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "Music", href: "#music" },
-  { label: "Tattoo", href: "#inknior" },
-  { label: "Design", href: "#fastcutedits" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Video", href: "#video" },
-  { label: "About", href: "#about" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "App", href: "#app" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Music", href: "/#music" },
+  { label: "Tattoo", href: "/#inknior" },
+  { label: "Design", href: "/#fastcutedits" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Video", href: "/#video" },
+  { label: "About", href: "/#about" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "App", href: "/#app" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Header() {
@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-ink/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1400px] items-center gap-6 px-4 py-3 lg:px-8">
-        <a href="#home" className="flex shrink-0 items-center gap-2">
+        <a href="/#home" className="flex shrink-0 items-center gap-2">
           <img src={emblem.url} alt="VonteVisualz emblem" className="h-9 w-auto mix-blend-screen object-contain" />
           <span className="display metal-text text-lg tracking-[0.14em] sm:text-xl">
             VonteVisualz
@@ -41,7 +41,7 @@ export function Header() {
         </nav>
 
         <a
-          href="#booking"
+          href="/#booking"
           className="ml-auto hidden border border-royal/60 bg-royal/15 px-5 py-2 text-[0.66rem] tracking-[0.22em] uppercase text-foreground transition-colors hover:bg-royal/35 lg:inline-block"
         >
           Book Now
@@ -70,7 +70,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#booking"
+            href="/#booking"
             onClick={() => setOpen(false)}
             className="mt-2 border border-royal/60 bg-royal/15 px-5 py-3 text-center text-[0.7rem] tracking-[0.22em] uppercase"
           >
