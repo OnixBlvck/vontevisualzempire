@@ -1,6 +1,8 @@
 import { Instagram, Mail } from "lucide-react";
 import { toast } from "sonner";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
+import { useSiteContent } from "@/hooks/use-site-content";
+import { telHref } from "@/lib/site-content";
 
 const QUICK_A = [
   { label: "Home", href: "/#home" },
@@ -16,7 +18,13 @@ const QUICK_B = [
   { label: "Contact", href: "/#contact" },
 ];
 
+function instagramHandle(url: string): string {
+  const segment = url.replace(/\/+$/, "").split("/").pop() ?? "";
+  return segment ? `@${segment}` : "Instagram";
+}
+
 export function Footer() {
+  const { settings } = useSiteContent();
   return (
     <footer className="bg-ink">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-14 lg:grid-cols-[1.1fr_1fr_0.8fr_1.2fr] lg:px-8">
@@ -61,12 +69,12 @@ export function Footer() {
           <p className="label-xs text-royal">Connect</p>
           <div className="mt-4 grid gap-2">
             {[
-              { label: "Onyx Blvck", handle: "@iamonixblvck", href: "https://www.instagram.com/iamonixblvck/" },
-              { label: "FastCutEdits", handle: "@fast.cuteditz", href: "https://www.instagram.com/fast.cuteditz/" },
-              { label: "InkNior", handle: "@inknior", href: "https://www.instagram.com/inknior/" },
+              { label: "Onyx Blvck", href: settings.instagram_onyxblvck },
+              { label: "FastCutEdits", href: settings.instagram_fastcutedits },
+              { label: "InkNior", href: settings.instagram_inknior },
             ].map((s) => (
               <a
-                key={s.handle}
+                key={s.label}
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,11 +82,11 @@ export function Footer() {
               >
                 <Instagram className="size-4 text-royal" />
                 {s.label}
-                <span className="ml-auto normal-case tracking-normal">{s.handle}</span>
+                <span className="ml-auto normal-case tracking-normal">{instagramHandle(s.href)}</span>
               </a>
             ))}
             <a
-              href="mailto:vontevisualz@gmail.com"
+              href={`mailto:${settings.contact_email}`}
               className="flex min-h-11 items-center gap-2 text-[0.62rem] tracking-[0.16em] uppercase text-muted-foreground transition-colors hover:text-foreground"
             >
               <Mail className="size-4 text-royal" /> Email
@@ -157,10 +165,10 @@ export function Footer() {
         <div>
           <p className="label-xs text-royal">Contact</p>
           <ul className="mt-3 grid gap-1 text-[0.65rem] tracking-[0.14em] text-muted-foreground">
-            <li><a href="tel:+18325997747" className="hover:text-foreground">(832) 599-7747</a></li>
-            <li><a href="mailto:vontevisualz@gmail.com" className="hover:text-foreground">vontevisualz@gmail.com</a></li>
+            <li><a href={telHref(settings.contact_phone)} className="hover:text-foreground">{settings.contact_phone}</a></li>
+            <li><a href={`mailto:${settings.contact_email}`} className="hover:text-foreground">{settings.contact_email.toLowerCase()}</a></li>
             <li><a href="/card" className="hover:text-foreground">Digital Business Card</a></li>
-            <li><a href="https://vontevisualz.com" className="hover:text-foreground">VonteVisualz.com</a></li>
+            <li><a href={settings.website_url} className="hover:text-foreground">VonteVisualz.com</a></li>
           </ul>
         </div>
         <div>
