@@ -1,12 +1,17 @@
 import { Download } from "lucide-react";
 import vcardQr from "@/assets/empire-access-qr.png.asset.json";
 import emblem from "@/assets/vonte-emblem.jpg.asset.json";
+import { useSiteContent } from "@/hooks/use-site-content";
+import { telHref } from "@/lib/site-content";
 
 interface DigitalCardProps {
   className?: string;
 }
 
 export function DigitalCard({ className = "" }: DigitalCardProps) {
+  const { settings } = useSiteContent();
+  const websiteLabel = settings.website_url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
   return (
     <div className={`panel p-6 text-center ${className}`}>
       <img
@@ -21,9 +26,9 @@ export function DigitalCard({ className = "" }: DigitalCardProps) {
       <p className="text-[0.6rem] tracking-[0.16em] uppercase text-muted-foreground">
         Houston, Texas
       </p>
-      <a href="tel:+18325997747" className="mt-2 block text-[0.62rem] text-muted-foreground hover:text-foreground">(832) 599-7747</a>
-      <a href="mailto:vontevisualz@gmail.com" className="block text-[0.62rem] text-muted-foreground hover:text-foreground">vontevisualz@gmail.com</a>
-      <a href="https://vontevisualz.com" className="block text-[0.62rem] text-muted-foreground hover:text-foreground">vontevisualz.com</a>
+      <a href={telHref(settings.contact_phone)} className="mt-2 block text-[0.62rem] text-muted-foreground hover:text-foreground">{settings.contact_phone}</a>
+      <a href={`mailto:${settings.contact_email}`} className="block text-[0.62rem] text-muted-foreground hover:text-foreground">{settings.contact_email}</a>
+      <a href={settings.website_url} className="block text-[0.62rem] text-muted-foreground hover:text-foreground">{websiteLabel}</a>
       <img
         src={vcardQr.url}
         alt="QR code linking to vontevisualz.com"
