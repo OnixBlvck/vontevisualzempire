@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793070118537,
+      "tag": "0000_admin_cms_deposits_whatsapp",
+      "breakpoints": true
+    }
+  ]
+}
