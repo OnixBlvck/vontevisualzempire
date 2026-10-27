@@ -13,4 +13,9 @@
 - [x] /app page and /booking-received page
 - [ ] Connect vontevisualz.com (blocked: domain not registered)
 - [x] Launch audit pass: fixed menu/footer links on secondary pages, honest newsletter signup, footer phone/card links, notices on every page, Make It Make Sense page
-- [ ] Re-ask skipped setup questions one at a time (prices, database, Make It Make Sense content, Square/WhatsApp) — waiting on answers before further changes
+- [x] Re-ask skipped setup questions (prices kept, database resumed, admin covers everything, Square deposit at submit, WhatsApp owner alerts)
+- [ ] Admin area: services, prices, contact, socials, Make It Make Sense, assets (blocked: admin login email not given)
+- [ ] Make It Make Sense managed content with private files (blocked: admin login)
+- [ ] Square $30 InkNior deposit at submission (needs Square connection)
+- [ ] WhatsApp Business alert to owner on each new booking request (needs WhatsApp connection)
+- [ ] Final three-pass QA and launch report
