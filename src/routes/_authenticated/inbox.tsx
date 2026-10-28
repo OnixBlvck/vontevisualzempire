@@ -1,8 +1,61 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { listMyBookingRequests } from "@/lib/bookings.functions";
+import { useState } from "react";
+import { toast } from "sonner";
+import { listMyBookingRequests, refreshDepositStatus, type BookingRequest } from "@/lib/bookings.functions";
+import { DEPOSIT_STATUS_LABELS } from "@/lib/booking-options";
 import { supabase } from "@/integrations/supabase/client";
+
+function DepositRow({ request }: { request: BookingRequest }) {
+  const refresh = useServerFn(refreshDepositStatus);
+  const queryClient = useQueryClient();
+  const [checking, setChecking] = useState(false);
+  if (request.deposit_status === "not_required") return null;
+  const amount = request.deposit_amount_cents ? ` ($${(request.deposit_amount_cents / 100).toFixed(0)})` : "";
+
+  async function check() {
+    setChecking(true);
+    try {
+      const res = await refresh({ data: { id: request.id } });
+      if (res.deposit_status === "paid") toast.success("Deposit received. Thank you.");
+      else toast.message("No payment recorded yet.");
+      await queryClient.invalidateQueries({ queryKey: ["booking-requests"] });
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Could not check the deposit.");
+    } finally {
+      setChecking(false);
+    }
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <dt>Deposit</dt>
+      <dd className="text-silver">
+        {DEPOSIT_STATUS_LABELS[request.deposit_status] ?? request.deposit_status}
+        {amount}
+      </dd>
+      {request.deposit_status === "awaiting_payment" && request.square_checkout_url && (
+        <>
+          <a
+            href={request.square_checkout_url}
+            className="border border-gold/50 px-2 py-0.5 text-gold hover:bg-gold/10"
+          >
+            Pay deposit
+          </a>
+          <button
+            type="button"
+            onClick={() => void check()}
+            disabled={checking}
+            className="border border-royal/40 px-2 py-0.5 hover:text-foreground disabled:opacity-60"
+          >
+            {checking ? "Checking…" : "I've paid — check"}
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
 
 const BRANDS: Record<string, string> = {
   inknior: "InkNior — Tattoo",
