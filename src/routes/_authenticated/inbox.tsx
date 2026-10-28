@@ -148,10 +148,23 @@ function Inbox() {
                 <dt>Email</dt>
                 <dd className="normal-case tracking-normal text-silver">{r.contact_email}</dd>
               </div>
+              {r.service && (
+                <div className="flex gap-2">
+                  <dt>Service</dt>
+                  <dd className="text-silver">{r.service}</dd>
+                </div>
+              )}
               <div className="flex gap-2">
                 <dt>Preferred date</dt>
                 <dd className="text-silver">{r.preferred_date ?? "Flexible"}</dd>
               </div>
+              {r.preferred_time && (
+                <div className="flex gap-2">
+                  <dt>Preferred time</dt>
+                  <dd className="text-silver">{r.preferred_time}</dd>
+                </div>
+              )}
+              <DepositRow request={r} />
               <div className="flex gap-2">
                 <dt>Sent</dt>
                 <dd className="text-silver">{new Date(r.created_at).toLocaleString()}</dd>
