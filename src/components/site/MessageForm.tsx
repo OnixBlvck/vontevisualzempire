@@ -54,9 +54,10 @@ export function MessageForm() {
         </a>
         <p className="mt-3 text-[0.6rem] leading-relaxed text-muted-foreground">
           Prefer email?{" "}
-          <a href="mailto:vontevisualz@gmail.com" className="underline hover:text-foreground">
-            vontevisualz@gmail.com
+          <a href="mailto:contact@vontevisuals.com" className="underline hover:text-foreground">
+            contact@vontevisuals.com
           </a>
+          <span className="block mt-2">Booking requests: <a href="mailto:book@vontevisuals.com" className="underline hover:text-foreground">book@vontevisuals.com</a></span>
         </p>
       </div>
     );
