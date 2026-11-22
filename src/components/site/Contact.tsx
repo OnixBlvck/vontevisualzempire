@@ -19,6 +19,14 @@ export function Contact() {
               </a>
             </li>
             <li className="flex items-center gap-2">
+              <Mail className="size-3.5 text-royal" />
+              <a href="mailto:book@vontevisuals.com" className="hover:text-foreground">Book: book@vontevisuals.com</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="size-3.5 text-royal" />
+              <a href="mailto:contact@vontevisuals.com" className="hover:text-foreground">General: contact@vontevisuals.com</a>
+            </li>
+            <li className="flex items-center gap-2">
               <Phone className="size-3.5 text-royal" />
               <a href="tel:+18325997747" className="hover:text-foreground">(832) 599-7747</a>
             </li>
