@@ -80,7 +80,10 @@ export function BookingForm() {
       {signedIn === false ? (
         <div className="mt-5">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Sign in to send a booking request and track its status in your inbox.
+            Online booking requires sign-in. Prefer not to create an account? Email your booking details to{" "}
+            <a href="mailto:book@vontevisuals.com" className="underline hover:text-foreground">
+              book@vontevisuals.com
+            </a>.
           </p>
           <a
             href="/auth?next=%2F%23booking"
@@ -190,8 +193,8 @@ export function BookingForm() {
         </form>
       )}
       <p className="mt-3 text-[0.6rem] leading-relaxed text-muted-foreground">
-        Requests are reviewed manually. Nothing is confirmed until I reply and any deposit is
-        arranged.
+        Every service requires an upfront deposit before work begins. InkNior: $30 deposit.
+        Other service deposit amounts are confirmed with your quote.
       </p>
     </div>
   );
