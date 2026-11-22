@@ -27,7 +27,7 @@ export function About() {
         </div>
 
         {/* Onyx Blvck story */}
-        <div id="onixblvck-story">
+        <div id="onyxblvck-story">
           <p className="label-xs text-royal">Onyx Blvck</p>
           <h2 className="metal-text mt-2 text-2xl">Forged From The Ashes</h2>
           <img
