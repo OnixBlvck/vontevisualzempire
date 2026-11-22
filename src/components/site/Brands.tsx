@@ -18,7 +18,7 @@ const PANELS: {
     id: "inknior",
     name: "InkNior",
     tag: "Tattoo / Permanent Identity",
-    body: "Blackwork, realism, lettering and custom pieces. Ink that carries a story instead of a trend.",
+    body: "Blackwork, lettering and custom pieces. Ink that carries a story instead of a trend.",
     cta: "View Tattoos",
     href: "#pricing",
     bg: panelTattoo.url,
@@ -37,7 +37,7 @@ const PANELS: {
     igUrl: "https://www.instagram.com/fast.cuteditz/",
   },
   {
-    id: "onixblvck",
+    id: "onyxblvck",
     name: "Onyx Blvck",
     tag: "Music / Artist Identity",
     body: "Songs written from real life. Every scar has a sound, and the vault keeps every one of them.",
