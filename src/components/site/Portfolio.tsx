@@ -24,7 +24,7 @@ export function Portfolio({
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="label-xs text-royal">Portfolio</p>
-            <h2 className="metal-text mt-2 text-3xl">The Work</h2>
+            <h2 className="metal-text mt-2 text-3xl">Selected Concepts</h2>
           </div>
           <div className="flex flex-wrap gap-2">
             {FILTERS.map((f) => (
