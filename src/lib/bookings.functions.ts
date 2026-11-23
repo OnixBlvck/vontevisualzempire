@@ -9,21 +9,20 @@ export const BUSINESSES = ["inknior", "onyxblvck", "fastcutedits"] as const;
 
 const bookingInput = z
   .object({
-    // "message" covers the general Send A Message form; it lands in the same inbox.
     business: z.enum([...BUSINESSES, "message"]),
     full_name: z.string().trim().min(1).max(120),
     contact_email: z.string().trim().email().max(160),
     details: z.string().trim().min(1).max(2000),
-    preferred_date: z
-      .string()
-      .trim()
-      .regex(/^\d{4}-\d{2}-\d{2}$/)
-      .optional()
-      .or(z.literal("")),
+    preferred_date: z.string().trim().regex(/^\\d{4}-\\d{2}-\\d{2}$/).optional().or(z.literal("")),
     service: z.string().trim().min(1).max(120).optional(),
     preferred_time: z.enum(TIME_OPTIONS).optional(),
+    website: z.string().max(0).optional(),
   })
   .superRefine((d, ctx) => {
+    if (d.website) {
+      ctx.addIssue({ code: "custom", path: ["website"], message: "Invalid submission." });
+      return;
+    }
     if (d.business === "message") return;
     if (!d.service) ctx.addIssue({ code: "custom", path: ["service"], message: "Choose a service." });
     if (!d.preferred_time) ctx.addIssue({ code: "custom", path: ["preferred_time"], message: "Choose a time." });
@@ -59,14 +58,17 @@ export type CreateBookingResult = {
   depositError: string | null;
 };
 
+/**
+ * Public intake endpoint. The service-role client stays server-side; all fields
+ * are schema-validated and the honeypot rejects common automated form submissions.
+ */
 export const createBookingRequest = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
   .inputValidator((data: unknown) => bookingInput.parse(data))
-  .handler(async ({ data, context }): Promise<CreateBookingResult> => {
-    const { supabase, userId } = context;
+  .handler(async ({ data }): Promise<CreateBookingResult> => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
     if (data.business !== "message") {
-      const { data: service, error } = await supabase
+      const { data: service, error } = await supabaseAdmin
         .from("services")
         .select("id")
         .eq("business", data.business)
@@ -77,7 +79,7 @@ export const createBookingRequest = createServerFn({ method: "POST" })
       if (!service) throw new Error("That service isn't available. Please choose another.");
     }
 
-    const { data: settingRows } = await supabase
+    const { data: settingRows } = await supabaseAdmin
       .from("site_settings")
       .select("key, value")
       .in("key", ["inknior_deposit_cents", "whatsapp_alert_number"]);
@@ -87,10 +89,10 @@ export const createBookingRequest = createServerFn({ method: "POST" })
     const depositCents =
       data.business === "inknior" ? Number.parseInt(setting("inknior_deposit_cents"), 10) || 0 : 0;
 
-    const { data: row, error } = await supabase
+    const { data: row, error } = await supabaseAdmin
       .from("booking_requests")
       .insert({
-        user_id: userId,
+        user_id: null,
         business: data.business,
         full_name: data.full_name,
         contact_email: data.contact_email,
@@ -104,11 +106,10 @@ export const createBookingRequest = createServerFn({ method: "POST" })
       .select(BOOKING_COLUMNS)
       .single();
     if (error || !row) {
-      console.error("Booking insert failed", error);
+      console.error("Public booking insert failed", error);
       throw new Error("Could not send your request. Please try again.");
     }
 
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     let request = row as BookingRequest;
     let checkoutUrl: string | null = null;
     let depositError: string | null = null;
@@ -131,7 +132,6 @@ export const createBookingRequest = createServerFn({ method: "POST" })
             square_checkout_url: checkout.url,
           })
           .eq("id", row.id)
-          .eq("user_id", userId)
           .select(BOOKING_COLUMNS)
           .single();
         if (updateError || !updated) throw new Error("Could not save the deposit link.");
@@ -172,7 +172,6 @@ export const refreshDepositStatus = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((data: unknown) => z.object({ id: z.string().uuid() }).parse(data))
   .handler(async ({ data, context }) => {
-    // RLS limits this read to the requester's own rows (or the admin).
     const { data: row, error } = await context.supabase
       .from("booking_requests")
       .select("id, deposit_status, square_order_id, square_checkout_url")

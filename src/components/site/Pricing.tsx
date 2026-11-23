@@ -46,7 +46,7 @@ export function Pricing() {
                 <p className="label-xs mt-6 text-[0.55rem] text-gold">
                   {card.business === "inknior" && deposit
                     ? `${deposit} deposit paid with your request`
-                    : "Final quote after review"}
+                    : "Deposit required before work begins; amount confirmed with your quote"}
                 </p>
                 <a
                   href="/#booking"
