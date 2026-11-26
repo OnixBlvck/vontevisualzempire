@@ -27,6 +27,13 @@ export const getSiteContent = createServerFn({ method: "GET" }).handler(
       if ((SETTING_KEYS as string[]).includes(row.key)) settings[row.key as SettingKey] = row.value;
     }
 
+    // Enforce owner-approved public contact details over stale legacy rows.
+    settings.contact_email = DEFAULT_SETTINGS.contact_email;
+    if (/^https?:\/\/(www\.)?vontevisualz\.com\/?$/i.test(settings.website_url) ||
+        /^https?:\/\/(www\.)?vontevisuals\.com\/?$/i.test(settings.website_url)) {
+      settings.website_url = DEFAULT_SETTINGS.website_url;
+    }
+
     const loadError = Boolean(servicesResult.error || settingsResult.error);
     if (loadError) {
       console.error("Site content load failed", servicesResult.error, settingsResult.error);

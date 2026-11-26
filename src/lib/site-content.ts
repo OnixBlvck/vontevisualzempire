@@ -22,8 +22,8 @@ export type ServiceRow = {
 /** Approved values used until the owner saves different ones in the admin area. */
 export const DEFAULT_SETTINGS = {
   contact_phone: "(832) 599-7747",
-  contact_email: "VONTEVISUALZ@GMAIL.COM",
-  website_url: "https://vontevisualz.com",
+  contact_email: "VonteVisualz@gmail.com",
+  website_url: "https://vontevisualzempire.lovable.app",
   instagram_onyxblvck: "https://www.instagram.com/iamonixblvck/",
   instagram_fastcutedits: "https://www.instagram.com/fast.cuteditz/",
   instagram_inknior: "https://www.instagram.com/inknior/",

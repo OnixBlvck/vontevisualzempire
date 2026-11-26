@@ -14,17 +14,9 @@ export function Contact() {
           <ul className="mt-5 grid gap-3 text-xs text-muted-foreground">
             <li className="flex items-center gap-2">
               <Mail className="size-3.5 text-royal" />
-              <a href="mailto:vontevisualz@gmail.com" className="hover:text-foreground">
-                vontevisualz@gmail.com
+              <a href="mailto:VonteVisualz@gmail.com" className="hover:text-foreground">
+                VonteVisualz@gmail.com
               </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail className="size-3.5 text-royal" />
-              <a href="mailto:book@vontevisuals.com" className="hover:text-foreground">Book: book@vontevisuals.com</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail className="size-3.5 text-royal" />
-              <a href="mailto:contact@vontevisuals.com" className="hover:text-foreground">General: contact@vontevisuals.com</a>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="size-3.5 text-royal" />
@@ -32,7 +24,7 @@ export function Contact() {
             </li>
             <li className="flex items-center gap-2">
               <Globe className="size-3.5 text-royal" />
-              <a href="https://vontevisualz.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">vontevisualz.com</a>
+              <a href="https://vontevisualzempire.lovable.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">vontevisualzempire.lovable.app</a>
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="size-3.5 text-royal" /> Houston, Texas

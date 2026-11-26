@@ -31,7 +31,7 @@ export function DigitalCard({ className = "" }: DigitalCardProps) {
       <a href={settings.website_url} className="block text-[0.62rem] text-muted-foreground hover:text-foreground">{websiteLabel}</a>
       <img
         src={vcardQr.url}
-        alt="QR code linking to vontevisualz.com"
+        alt="VonteVisualz business card QR code"
         loading="lazy"
         className="mx-auto mt-5 size-32 bg-white p-2"
       />

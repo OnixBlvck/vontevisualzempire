@@ -38,10 +38,10 @@ function BookingReceived() {
               <a href="tel:+18325997747" className="hover:text-royal">(832) 599-7747</a>
             </li>
             <li>
-              <a href="mailto:VONTEVISUALZ@GMAIL.COM" className="hover:text-royal">VONTEVISUALZ@GMAIL.COM</a>
+              <a href="mailto:VonteVisualz@gmail.com" className="hover:text-royal">VonteVisualz@gmail.com</a>
             </li>
             <li>
-              <a href="https://vontevisualz.com" className="hover:text-royal">vontevisualz.com</a>
+              <a href="https://vontevisualzempire.lovable.app" className="hover:text-royal">vontevisualzempire.lovable.app</a>
             </li>
           </ul>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
