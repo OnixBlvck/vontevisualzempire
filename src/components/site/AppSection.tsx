@@ -1,7 +1,7 @@
 import { Apple, Smartphone } from "lucide-react";
 import mockup from "@/assets/app-mockup.jpg.asset.json";
 
-const LIVE_SITE_URL = "https://vontevisualz.com";
+const LIVE_SITE_URL = "https://vontevisualzempire.lovable.app";
 
 interface AppLinkProps {
   Icon: any;
