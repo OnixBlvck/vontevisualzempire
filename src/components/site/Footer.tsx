@@ -112,7 +112,7 @@ export function Footer() {
               const email = String(new FormData(form).get("newsletter_email") ?? "").trim();
               // No mailing-list service is connected, so the signup is sent by email.
               const body = encodeURIComponent(`Please add ${email} to the VonteVisualz updates list.`);
-              window.location.href = `mailto:vontevisualz@gmail.com?subject=${encodeURIComponent("Newsletter signup")}&body=${body}`;
+              window.location.href = `mailto:VonteVisualz@gmail.com?subject=${encodeURIComponent("Newsletter signup")}&body=${body}`;
               toast.info("Your email app is opening. Send the message to join the list.");
             }}
             className="mt-4 flex flex-wrap gap-2"
@@ -168,7 +168,7 @@ export function Footer() {
             <li><a href={telHref(settings.contact_phone)} className="hover:text-foreground">{settings.contact_phone}</a></li>
             <li><a href={`mailto:${settings.contact_email}`} className="hover:text-foreground">{settings.contact_email.toLowerCase()}</a></li>
             <li><a href="/card" className="hover:text-foreground">Digital Business Card</a></li>
-            <li><a href={settings.website_url} className="hover:text-foreground">VonteVisualz.com</a></li>
+            <li><a href={settings.website_url} className="hover:text-foreground">Website</a></li>
           </ul>
         </div>
         <div>
