@@ -23,8 +23,8 @@ export type ServiceRow = {
 export const DEFAULT_SETTINGS = {
   contact_phone: "(832) 599-7747",
   contact_email: "VonteVisualz@gmail.com",
-  website_url: "https://vontevisualzempire.lovable.app",
-  instagram_onyxblvck: "https://www.instagram.com/iamonixblvck/",
+  website_url: "https://vontevisualzempire2027.vercel.app",
+  instagram_onyxblvck: "",
   instagram_fastcutedits: "https://www.instagram.com/fast.cuteditz/",
   instagram_inknior: "https://www.instagram.com/inknior/",
   inknior_deposit_cents: "3000",

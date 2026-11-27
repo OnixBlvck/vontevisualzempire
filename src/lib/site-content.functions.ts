@@ -29,6 +29,8 @@ export const getSiteContent = createServerFn({ method: "GET" }).handler(
 
     // Enforce owner-approved public contact details over stale legacy rows.
     settings.contact_email = DEFAULT_SETTINGS.contact_email;
+    settings.website_url = DEFAULT_SETTINGS.website_url;
+    settings.instagram_onyxblvck = "";
     if (/^https?:\/\/(www\.)?vontevisualz\.com\/?$/i.test(settings.website_url) ||
         /^https?:\/\/(www\.)?vontevisuals\.com\/?$/i.test(settings.website_url)) {
       settings.website_url = DEFAULT_SETTINGS.website_url;

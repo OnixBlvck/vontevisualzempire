@@ -13,7 +13,7 @@ const bookingInput = z
     full_name: z.string().trim().min(1).max(120),
     contact_email: z.string().trim().email().max(160),
     details: z.string().trim().min(1).max(2000),
-    preferred_date: z.string().trim().regex(/^\\d{4}-\\d{2}-\\d{2}$/).optional().or(z.literal("")),
+    preferred_date: z.string().trim().regex(/^\d{4}-\d{2}-\d{2}$/).optional().or(z.literal("")),
     service: z.string().trim().min(1).max(120).optional(),
     preferred_time: z.enum(TIME_OPTIONS).optional(),
     website: z.string().max(0).optional(),
