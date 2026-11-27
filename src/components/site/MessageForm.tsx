@@ -61,7 +61,7 @@ export function MessageForm() {
         {busy ? "Sending…" : "Send A Message"}
       </button>
       <p className="text-[0.6rem] leading-relaxed text-muted-foreground">
-        Prefer email? <a href="mailto:contact@vontevisuals.com" className="underline hover:text-foreground">contact@vontevisuals.com</a>
+        Prefer email? <a href="mailto:VonteVisualz@gmail.com" className="underline hover:text-foreground">VonteVisualz@gmail.com</a>
       </p>
     </form>
   );
