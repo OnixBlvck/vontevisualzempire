@@ -72,7 +72,7 @@ export function Footer() {
               { label: "Onyx Blvck", href: settings.instagram_onyxblvck },
               { label: "FastCutEdits", href: settings.instagram_fastcutedits },
               { label: "InkNior", href: settings.instagram_inknior },
-            ].map((s) => (
+            ].filter((s) => Boolean(s.href)).map((s) => (
               <a
                 key={s.label}
                 href={s.href}
