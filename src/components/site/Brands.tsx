@@ -44,8 +44,8 @@ const PANELS: {
     cta: "Enter the Vault",
     href: "#music",
     bg: panelMusic.url,
-    ig: "@iamonixblvck",
-    igUrl: "https://www.instagram.com/iamonixblvck/",
+    ig: "",
+    igUrl: "",
   },
 ];
 
@@ -73,7 +73,7 @@ export function Brands() {
               <p className="mx-auto mt-5 max-w-[34ch] text-xs leading-relaxed text-muted-foreground">
                 {p.body}
               </p>
-              <a
+              {p.igUrl && <a
                 href={p.igUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export function Brands() {
               >
                 <Instagram className="size-4" />
                 {p.ig}
-              </a>
+              </a>}
               <a
                 href={p.href}
                 className="mt-6 inline-block border border-royal/50 bg-royal/15 px-6 py-3 text-[0.62rem] tracking-[0.24em] uppercase transition-colors hover:bg-royal/35"
