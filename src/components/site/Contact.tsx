@@ -24,7 +24,7 @@ export function Contact() {
             </li>
             <li className="flex items-center gap-2">
               <Globe className="size-3.5 text-royal" />
-              <a href="https://vontevisualzempire.lovable.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">vontevisualzempire.lovable.app</a>
+              <a href="https://vontevisualzempire2027.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">vontevisualzempire2027.vercel.app</a>
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="size-3.5 text-royal" /> Houston, Texas
@@ -32,7 +32,6 @@ export function Contact() {
           </ul>
           <div className="mt-5 grid gap-2">
             {[
-              { label: "Onyx Blvck", handle: "@iamonixblvck", url: "https://www.instagram.com/iamonixblvck/" },
               { label: "FastCutEdits", handle: "@fast.cuteditz", url: "https://www.instagram.com/fast.cuteditz/" },
               { label: "InkNior", handle: "@inknior", url: "https://www.instagram.com/inknior/" },
             ].map((s) => (
